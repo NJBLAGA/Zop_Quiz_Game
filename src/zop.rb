@@ -109,10 +109,26 @@ def player_name_selection
     puts a.asciify('ZOP').colorize(:red,)
     puts "BLAGA STUDIOS™ © 2020".colorize(:light_blue,)
     puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
-    puts "Press any key to continue...."
-    menu_input = gets.chomp.to_i
-    puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
-    exe_game(questions)
+    puts "Press 1 to continue...."
+    case menu_input = gets.chomp.to_i
+    when 1
+        questions = [
+            Question.new(Q1, "a"),
+            Question.new(Q2, "a"),
+            Question.new(Q3, "a"),
+            Question.new(Q4, "a"),
+            Question.new(Q5, "b"),
+            Question.new(Q6, "a"),
+            Question.new(Q7, "d"),
+            Question.new(Q8, "a"),
+            Question.new(Q9, "c"),
+            Question.new(Q10, "b"),
+        ]
+    return exe_game(questions)
+    when 2
+    questions_array
+    return exe_game(questions)   
+end
 end
 # -----------------------------------------------------------------------------------------
 # Instructions Screen
