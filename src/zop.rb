@@ -1,5 +1,4 @@
 # Gems used through bundler.
-require './menu.rb'
 require './test_bank.rb'
 require 'colorize'
 require 'artii'
@@ -29,7 +28,7 @@ end
 # Answer: The corresponding answer to that variable.
 questions = [
     Question.new(Q1, "a"),
-    Question.new(Q2, "d"),
+    Question.new(Q2, "a"),
     Question.new(Q3, "a"),
     Question.new(Q4, "a"),
     Question.new(Q5, "b"),
@@ -45,49 +44,121 @@ def exe_game(questions)
     answer = ""
     score = 0
     question_number = 1
-    current_question_number
+    puts "What is your name?"
+    @name = gets.chomp
+    player_name = @name
     for question in questions.shuffle
     break if score == 5
-    puts question.content
-            answer = gets.chomp()
-            if answer == question.answer
-            correct_answer
-            score += 1
-            else
-            incorrect_answer
-            end
-    end
-    congratulations
-    question_number += 1
-    end
-
-
-
-def current_question_number
     puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
     puts "Question: ".colorize(:green,) + question_number.to_s + "."
     puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
-end
- 
-    
-def correct_answer
+    puts question.content
     puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
-    puts "Correct Answer!".colorize(:green,)
-    puts player_name.colorize(:green,) + "'s ".colorize(:green,)  + "Progress: ".colorize(:green,)  + score.to_s + " out of 15 questions."
-    puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
+    question_number += 1
+    print player_name.colorize(:green,) + ": ".colorize(:green,)
+    answer = gets.chomp()
+            if answer == question.answer
+                score += 1
+                puts "Correct Answer!".colorize(:green,)
+                puts player_name.colorize(:green,) + "'s ".colorize(:green,)  + "Progress: ".colorize(:green,)  + score.to_s + " out of 10 questions."    
+                puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,) 
+            else
+                puts "Sorry! That was not the correct answer!".colorize(:green,)
+                puts "The correct answer was: ".colorize(:green,) + question.answer
+                puts player_name.colorize(:green,) + "'s ".colorize(:green,)  + "Progress:".colorize(:green,)  + score.to_s + " out of 10 questions."
+                puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
+            end
+            end
+            puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
+            puts "Thank you for playing ".colorize(:green,) + player_name.colorize(:green,) + "."
 end
-    
+# -----------------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------------
+def title_scene
+    Artii::Base#asciify
+    a = Artii::Base.new
+    a.asciify('ZOP')
+    system("clear")
+    puts a.asciify('ZOP').colorize(:red,)
+    puts "BLAGA STUDIOS™ © 2020".colorize(:light_blue,)
+    puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
+    puts "1: Start New Game.".colorize(:magenta,)
+    puts "2: Instructions.".colorize(:magenta,)
+    puts "3: Exit Game.".colorize(:magenta,)
+    puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
+    puts "WELCOME TO ZOP...."
+    case menu_input = gets.chomp.to_i
+    when  1
+        player_name_selection
+    when 2
+        game_instructions
+    when 3
+        game_exit
+    end
+end
+# -----------------------------------------------------------------------------------------
+# Play Name Selection Screen
+def player_name_selection
+    Artii::Base#asciify
+    a = Artii::Base.new
+    a.asciify('ZOP')
+    system("clear")
+    puts a.asciify('ZOP').colorize(:red,)
+    puts "BLAGA STUDIOS™ © 2020".colorize(:light_blue,)
+    puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
+    puts "Press any key to continue...."
+    menu_input = gets.chomp.to_i
+    puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
+    exe_game(questions)
+end
+# -----------------------------------------------------------------------------------------
+# Instructions Screen
+def game_instructions
+    Artii::Base#asciify
+    a = Artii::Base.new
+    a.asciify('Instructions .')
+    system("clear")
+    puts a.asciify('Instructions .').colorize(:red,)
+    puts "BLAGA STUDIOS™ © 2020".colorize(:light_blue,)
+    puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
+    puts "How To survive The Nightmare....".colorize(:magenta,)
+    puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
+    puts ".......".colorize(:magenta,)
+    puts ".......".colorize(:magenta,)
+    puts ".......".colorize(:magenta,)
+    puts ".......".colorize(:magenta,)
+    puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
+    puts "1: Main Menu.".colorize(:magenta,)
+    case exit_instructions = gets.chomp.to_i
+    when  1
+        system("clear")
+    return title_scene
+    end
+end
+# -----------------------------------------------------------------------------------------
+# Exit The Game
+def game_exit
+    system("exit")
+end
+# -----------------------------------------------------------------------------------------  
 
-def incorrect_answer
-    puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
-    puts "Sorry! That was not the correct answer!".colorize(:green,)
-    puts "The correct answer was: ".colorize(:green,) + question.answer
-    puts player_name.colorize(:green,) + "'s ".colorize(:green,)  + "Progress:".colorize(:green,)  + score.to_s + " out of 15 questions."
-    puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
-end
 
-def congratulations
-    puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
-    puts "Thank you for playing ".colorize(:green,) + player_name.colorize(:green,) + "."
-    puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
-end
+# exe_game(questions)
+title_scene
+
+
+
+
+
+
+
+
+
+   
+
+
+
+

@@ -1,6 +1,5 @@
 # Gems used through bundler.
-require './zop.rb'
-require './menu.rb'
+require './test_bank.rb'
 require 'colorize'
 require 'artii'
 # -----------------------------------------------------------------------------------------
@@ -98,3 +97,5 @@ c. Aardvarks
 d. Goannas
 END
 # Answer = b
+
+
