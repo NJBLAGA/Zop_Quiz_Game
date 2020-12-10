@@ -12,8 +12,6 @@ class Player_name
 end
 # -----------------------------------------------------------------------------------------
 # Question class.
-# Attribute content = questions located in question bank.
-# Attribute answer = correct answers to the content.
 class Question
     attr_accessor :content, :answer
     def initialize(content, answer)
@@ -21,23 +19,6 @@ class Question
          @answer = answer
     end
 end
-# -----------------------------------------------------------------------------------------
-# questions array.
-# Each question inside the questions array has two attirubtes assigned to it.
-# Content: A variable between Q1 and Q50.
-# Answer: The corresponding answer to that variable.
-questions = [
-    Question.new(Q1, "a"),
-    Question.new(Q2, "a"),
-    Question.new(Q3, "a"),
-    Question.new(Q4, "a"),
-    Question.new(Q5, "b"),
-    Question.new(Q6, "a"),
-    Question.new(Q7, "d"),
-    Question.new(Q8, "a"),
-    Question.new(Q9, "c"),
-    Question.new(Q10, "b"),
-]
 # -----------------------------------------------------------------------------------------
 # Method to run the quiz through the questions array
 def exe_game(questions)
@@ -72,10 +53,6 @@ def exe_game(questions)
             puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
             puts "Thank you for playing ".colorize(:green,) + player_name.colorize(:green,) + "."
 end
-# -----------------------------------------------------------------------------------------
-# -----------------------------------------------------------------------------------------
-# -----------------------------------------------------------------------------------------
-# -----------------------------------------------------------------------------------------
 # -----------------------------------------------------------------------------------------
 def title_scene
     Artii::Base#asciify
@@ -162,7 +139,6 @@ end
 # -----------------------------------------------------------------------------------------  
 
 
-# exe_game(questions)
 title_scene
 
 

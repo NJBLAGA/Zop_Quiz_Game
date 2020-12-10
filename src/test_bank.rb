@@ -4,10 +4,6 @@ require 'colorize'
 require 'artii'
 # -----------------------------------------------------------------------------------------
 # Questions Bank.
-# Variables Q1 to Q50 each assigned to a question.
-# Each question has 4 possible answers.
-# Only one answer is correct.
-
 Q1 =<<END
 Which of these words is slang for 'money
 a. Dosh
