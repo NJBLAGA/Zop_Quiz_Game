@@ -1,6 +1,8 @@
 # Gems used through bundler.
 require './zop.rb'
 require './menu.rb'
+require 'colorize'
+require 'artii'
 # -----------------------------------------------------------------------------------------
 # Questions Bank.
 # Variables Q1 to Q50 each assigned to a question.
