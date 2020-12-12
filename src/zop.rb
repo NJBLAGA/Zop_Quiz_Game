@@ -37,20 +37,20 @@ def exe_game(questions)
             if answer == question.answer
                 score += 1
                 puts "Correct Answer!".colorize(:green,)
-                puts @name.colorize(:green,) + "'s ".colorize(:green,)  + "Progress: ".colorize(:green,)  + score.to_s + " out of 10 questions."    
+                puts @name.colorize(:green,) + "'s ".colorize(:green,)  + "Progress: ".colorize(:yellow,)  + score.to_s + " out of 10 questions."    
                 puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,) 
             else
-                puts "Sorry! That was not the correct answer!".colorize(:green,)
-                puts "The correct answer was: ".colorize(:green,) + question.answer
-                puts @name.colorize(:green,) + "'s ".colorize(:green,)  + "Progress:".colorize(:green,)  + score.to_s + " out of 10 questions."
+                puts "Sorry! That was not the correct answer!".colorize(:red,)
+                puts "The correct answer: ".colorize(:green,) + question.answer
+                puts @name.colorize(:green,) + "'s ".colorize(:green,)  + "Progress: ".colorize(:yellow,)  + score.to_s + " out of 10 questions."
                 puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
             end
             end
             puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
-            puts "Thank you for playing ".colorize(:green,) 
-            puts "Are you ready for the next level?"
-            puts "1. Zope me in!"
-            puts "2. Sorry, I'm all Zoped out!"
+            puts "Thank you for playing ".colorize(:green,) + @name.colorize(:green,)
+            puts "Are you ready for the next level?".colorize(:light_blue,)
+            puts "1. Zope me in!".colorize(:yellow,)
+            puts "2. Sorry, I'm all Zoped out!".colorize(:yellow,)
             case next_level_progress = gets.chomp.to_i
             when 1
             return level_path
@@ -117,10 +117,10 @@ def level_path
     puts a.asciify('Level Selection').colorize(:red,)
     puts "BLAGA STUDIOS™ © 2020".colorize(:light_blue,)
     puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
-    puts "1: Level 1".colorize(:yellow,)
-    puts "2: Level 2".colorize(:yellow,)
-    puts "3: Level 3".colorize(:yellow,)
-    puts "4: Main Menu".colorize(:yellow,)
+    puts "1: Level 1".colorize(:magenta,)
+    puts "2: Level 2".colorize(:magenta,)
+    puts "3: Level 3".colorize(:magenta,)
+    puts "4: Main Menu".colorize(:magenta,)
     print @name.colorize(:green,) + ": ".colorize(:green,)
     case menu_input = gets.chomp.to_i
     when  1   
@@ -208,12 +208,12 @@ def level_three
 def game_instructions
     Artii::Base#asciify
     a = Artii::Base.new
-    a.asciify('Instructions .')
+    a.asciify('Instructions ')
     system("clear")
     puts a.asciify('Instructions .').colorize(:red,)
     puts "BLAGA STUDIOS™ © 2020".colorize(:light_blue,)
     puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
-    puts "How To survive The Nightmare....".colorize(:magenta,)
+    puts "Get Zopped.".colorize(:magenta,)
     puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
     puts ".......".colorize(:magenta,)
     puts ".......".colorize(:magenta,)
