@@ -27,28 +27,29 @@ def exe_game(questions)
     question_number = 1
     for question in questions.shuffle
     break if score == 5
-    puts "Question: ".colorize(:green,) + question_number.to_s + "."
+    puts "Question: ".colorize(:magenta,) + question_number.to_s + "."
     puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
     puts question.content
     puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
     question_number += 1
-    print @name.colorize(:green,) + ": ".colorize(:green,)
+    print @name.colorize(:blue,) + ": ".colorize(:blue,)
     answer = gets.chomp()
             if answer == question.answer
                 score += 1
                 puts "Correct Answer!".colorize(:green,)
-                puts @name.colorize(:green,) + "'s ".colorize(:green,)  + "Progress: ".colorize(:yellow,)  + score.to_s + " out of 10 questions."    
+                puts @name.colorize(:yellow,)+ "'s ".colorize(:yellow,)  + "Progress: ".colorize(:yellow,)  + score.to_s + " out of 10 questions."    
                 puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,) 
             else
-                puts "Sorry! That was not the correct answer!".colorize(:red,)
-                puts "The correct answer: ".colorize(:green,) + question.answer
-                puts @name.colorize(:green,) + "'s ".colorize(:green,)  + "Progress: ".colorize(:yellow,)  + score.to_s + " out of 10 questions."
+                puts "Incorrect Answer!".colorize(:red,)
+                puts "The Correct answer: ".colorize(:green,) + question.answer
+                puts @name.colorize(:yellow,)  + "'s ".colorize(:yellow,)  + "Progress: ".colorize(:yellow,)  + score.to_s + " out of 10 questions."
                 puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
             end
             end
             puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
-            puts "Thank you for playing ".colorize(:green,) + @name.colorize(:green,)
-            puts "Are you ready for the next level?".colorize(:light_blue,)
+            puts "Well Done! ".colorize(:green,) + @name.colorize(:green,)
+            puts "You Zopped that! ".colorize(:blue,)
+            puts "Are you ready for the next level?".colorize(:blue,)
             puts "1. Zope me in!".colorize(:yellow,)
             puts "2. Sorry, I'm all Zoped out!".colorize(:yellow,)
             case next_level_progress = gets.chomp.to_i
@@ -97,10 +98,10 @@ def player_name_selection
     name = gets.chomp
     @name = name
     puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
-    puts "Welcome ".colorize(:light_blue,) + @name.colorize(:green,)
-    puts "Are you ready for Zop?".colorize(:light_blue,) 
-    puts "Press the any key to continue..."
-    print @name.colorize(:green,) + ": ".colorize(:green,)
+    puts "Welcome ".colorize(:green,) + @name.colorize(:green,)
+    puts "Are you ready for Zop?".colorize(:blue,) 
+    puts "Press the any key to continue...".colorize(:blue,) 
+    print @name.colorize(:blue,) + ": ".colorize(:blue,)
     start_game = gets.chomp
     if start_game = " "
     return level_path
@@ -121,7 +122,7 @@ def level_path
     puts "2: Level 2".colorize(:magenta,)
     puts "3: Level 3".colorize(:magenta,)
     puts "4: Main Menu".colorize(:magenta,)
-    print @name.colorize(:green,) + ": ".colorize(:green,)
+    print @name.colorize(:blue,) + ": ".colorize(:blue,)
     case menu_input = gets.chomp.to_i
     when  1   
     return level_one
