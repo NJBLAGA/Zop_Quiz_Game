@@ -25,35 +25,41 @@ def exe_game(questions)
     answer = ""
     score = 0
     question_number = 1
-    puts "What is your name?"
-    @name = gets.chomp
-    player_name = @name
     for question in questions.shuffle
     break if score == 5
-    puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
     puts "Question: ".colorize(:green,) + question_number.to_s + "."
     puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
     puts question.content
     puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
     question_number += 1
-    print player_name.colorize(:green,) + ": ".colorize(:green,)
+    print @name.colorize(:green,) + ": ".colorize(:green,)
     answer = gets.chomp()
             if answer == question.answer
                 score += 1
                 puts "Correct Answer!".colorize(:green,)
-                puts player_name.colorize(:green,) + "'s ".colorize(:green,)  + "Progress: ".colorize(:green,)  + score.to_s + " out of 10 questions."    
+                puts @name.colorize(:green,) + "'s ".colorize(:green,)  + "Progress: ".colorize(:green,)  + score.to_s + " out of 10 questions."    
                 puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,) 
             else
                 puts "Sorry! That was not the correct answer!".colorize(:green,)
                 puts "The correct answer was: ".colorize(:green,) + question.answer
-                puts player_name.colorize(:green,) + "'s ".colorize(:green,)  + "Progress:".colorize(:green,)  + score.to_s + " out of 10 questions."
+                puts @name.colorize(:green,) + "'s ".colorize(:green,)  + "Progress:".colorize(:green,)  + score.to_s + " out of 10 questions."
                 puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
             end
             end
             puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
-            puts "Thank you for playing ".colorize(:green,) + player_name.colorize(:green,) + "."
-end
+            puts "Thank you for playing ".colorize(:green,) 
+            puts "Are you ready for the next level?"
+            puts "1. Zope me in!"
+            puts "2. Sorry, I'm all Zoped out!"
+            case next_level_progress = gets.chomp.to_i
+            when 1
+            return level_path
+            when 2
+            return title_scene
+            end
+    end
 # -----------------------------------------------------------------------------------------
+# Title Screen.
 def title_scene
     Artii::Base#asciify
     a = Artii::Base.new
@@ -62,11 +68,12 @@ def title_scene
     puts a.asciify('ZOP').colorize(:red,)
     puts "BLAGA STUDIOS™ © 2020".colorize(:light_blue,)
     puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
+    puts "WELCOME TO ZOP...."
+    puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
     puts "1: Start New Game.".colorize(:magenta,)
     puts "2: Instructions.".colorize(:magenta,)
     puts "3: Exit Game.".colorize(:magenta,)
     puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
-    puts "WELCOME TO ZOP...."
     case menu_input = gets.chomp.to_i
     when  1
         player_name_selection
@@ -81,14 +88,60 @@ end
 def player_name_selection
     Artii::Base#asciify
     a = Artii::Base.new
-    a.asciify('ZOP')
+    a.asciify('WELCOME')
     system("clear")
-    puts a.asciify('ZOP').colorize(:red,)
+    puts a.asciify('WELCOME').colorize(:red,)
     puts "BLAGA STUDIOS™ © 2020".colorize(:light_blue,)
     puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
-    puts "Press 1 to continue...."
+    puts "What is your name?".colorize(:yellow,)
+    name = gets.chomp
+    @name = name
+    puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
+    puts "Welcome ".colorize(:light_blue,) + @name.colorize(:green,)
+    puts "Are you ready for Zop?".colorize(:light_blue,) 
+    puts "Press the any key to continue..."
+    print @name.colorize(:green,) + ": ".colorize(:green,)
+    start_game = gets.chomp
+    if start_game = " "
+    return level_path
+    end
+end
+# -----------------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------------
+# Level Selection
+def level_path
+    Artii::Base#asciify
+    a = Artii::Base.new
+    a.asciify('Level Selection')
+    system("clear")
+    puts a.asciify('Level Selection').colorize(:red,)
+    puts "BLAGA STUDIOS™ © 2020".colorize(:light_blue,)
+    puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
+    puts "1: Level 1".colorize(:yellow,)
+    puts "2: Level 2".colorize(:yellow,)
+    puts "3: Level 3".colorize(:yellow,)
+    puts "4: Main Menu".colorize(:yellow,)
+    print @name.colorize(:green,) + ": ".colorize(:green,)
     case menu_input = gets.chomp.to_i
-    when 1
+    when  1   
+    return level_one
+    when 2
+    return level_two
+    when 3
+    return level_three
+    when 4
+    return title_scene
+    end
+end
+# Level 1
+def level_one
+    Artii::Base#asciify
+    a = Artii::Base.new
+    a.asciify('Level 1')
+    system("clear")
+    puts a.asciify('Level 1').colorize(:red,)
+    puts "BLAGA STUDIOS™ © 2020".colorize(:light_blue,)
+    puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
         questions = [
             Question.new(Q1, "a"),
             Question.new(Q2, "a"),
@@ -101,12 +154,55 @@ def player_name_selection
             Question.new(Q9, "c"),
             Question.new(Q10, "b"),
         ]
-    return exe_game(questions)
-    when 2
-    questions_array
-    return exe_game(questions)   
+    return exe_game(questions) 
+  end
+# -----------------------------------------------------------------------------------------
+# Level 2
+def level_two
+    Artii::Base#asciify
+    a = Artii::Base.new
+    a.asciify('LEVEL 2')
+    system("clear")
+    puts a.asciify('Level 2').colorize(:red,)
+    puts "BLAGA STUDIOS™ © 2020".colorize(:light_blue,)
+    puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
+        questions = [
+            Question.new(Q1, "a"),
+            Question.new(Q2, "a"),
+            Question.new(Q3, "a"),
+            Question.new(Q4, "a"),
+            Question.new(Q5, "b"),
+            Question.new(Q6, "a"),
+            Question.new(Q7, "d"),
+            Question.new(Q8, "a"),
+            Question.new(Q9, "c"),
+            Question.new(Q10, "b"),
+        ]
+    return exe_game(questions) 
 end
-end
+# Level 3
+def level_three
+    Artii::Base#asciify
+    a = Artii::Base.new
+    a.asciify('Level 3')
+    system("clear")
+    puts a.asciify('Level 3').colorize(:red,)
+    puts "BLAGA STUDIOS™ © 2020".colorize(:light_blue,)
+    puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
+        questions = [
+            Question.new(Q1, "a"),
+            Question.new(Q2, "a"),
+            Question.new(Q3, "a"),
+            Question.new(Q4, "a"),
+            Question.new(Q5, "b"),
+            Question.new(Q6, "a"),
+            Question.new(Q7, "d"),
+            Question.new(Q8, "a"),
+            Question.new(Q9, "c"),
+            Question.new(Q10, "b"),
+        ]
+    return exe_game(questions) 
+  end
 # -----------------------------------------------------------------------------------------
 # Instructions Screen
 def game_instructions
@@ -140,6 +236,7 @@ end
 
 
 title_scene
+
 
 
 
