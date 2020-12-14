@@ -1,12 +1,12 @@
-# Gems used through bundler.
 require './test_bank.rb'
 require 'colorize'
 require 'artii'
 # -----------------------------------------------------------------------------------------
 # Questions Bank.
-
+# -----------------------------------------------------------------------------------------
 # Level 1
-# Novice Questions
+# Novice Questions:
+# -----------------------------------------------------------------------------------------
 Q01 =<<END
 In the Walt Disney film, what type of creature is Bambi?
 a. Deer
@@ -127,10 +127,10 @@ c. Platypus
 d. Wombat
 END
 # Answer = c
-
+# -----------------------------------------------------------------------------------------
 # Level 1
-# Easy Questions
-
+# Easy Questions:
+# -----------------------------------------------------------------------------------------
 Q16 =<<END
 What do you do if you ‘grease someone’s palm’?
 a. Tell a fortune
@@ -251,9 +251,10 @@ c. 400 metres
 d. 1500 metres
 END
 # Answer = d
-
+# -----------------------------------------------------------------------------------------
 # Level 2
-# Medium Questions
+# Medium Questions:
+# -----------------------------------------------------------------------------------------
 Q31 =<<END
 What is the correct term for the rotating part of a windmill?
 a. Sails
@@ -374,9 +375,10 @@ c. Iron
 d. Copper
 END
 # Answer = b
-
+# -----------------------------------------------------------------------------------------
 # Level 2
-# Hard Questions
+# Hard Questions:
+# -----------------------------------------------------------------------------------------
 Q46 =<<END
 Who co-wrote the song ‘Do They Know It’s Christmas’ with Bob Geldof?
 a. David Bowie
@@ -497,9 +499,10 @@ c. Three
 d. Four
 END
 # Answer = c
-
+# -----------------------------------------------------------------------------------------
 # Level 3
-# Expert Questions
+# Expert Questions:
+# -----------------------------------------------------------------------------------------
 Q61 =<<END
 What was the first vineyard established in the Barossa Valley?
 a. Orlando
@@ -620,9 +623,10 @@ c. Snake
 d. Tree
 END
 # Answer = c
-
+# -----------------------------------------------------------------------------------------
 # Level 3
-# Zop Questions
+# Zop Questions:
+# -----------------------------------------------------------------------------------------
 Q76 =<<END
 The largest of the great salt lakes of South Australia, Lake Eyre North is connected to Lake Eyre South by which usually dry channel?
 a. Stuart
@@ -743,3 +747,4 @@ c. Red
 d. Green
 END
 # Answer = a
+# -----------------------------------------------------------------------------------------
