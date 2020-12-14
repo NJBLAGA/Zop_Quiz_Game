@@ -2,6 +2,7 @@ require './zop.rb'
 require './test_bank.rb'
 require 'colorize'
 require 'artii'
+require 'tty-spinner'
 # -----------------------------------------------------------------------------------------
 # Level 1
 def level_one

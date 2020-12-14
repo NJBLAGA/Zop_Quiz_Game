@@ -27,6 +27,13 @@ def exe_game(questions)
     score = 0
     attempts = 5
     question_number = 1
+    string = "String which contains all kinds of emoji: Sub-Region flag:"
+    TTY::Spinner.new
+    spinner = TTY::Spinner.new("[:spinner] Loading Level ...".colorize(:light_magenta,), format: :bouncing_ball)
+    spinner.auto_spin # Automatic animation with default interval
+    sleep(1) # Perform task
+    spinner.stop("Done!".colorize(:light_magenta,)) # Stop animation
+    puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
     for question in questions.shuffle
     break if score == 10
     puts "Question: ".colorize(:magenta,) + question_number.to_s 
@@ -51,6 +58,13 @@ def exe_game(questions)
                 puts @name.colorize(:yellow,) + "'s ".colorize(:yellow,) + "Progress: ".colorize(:yellow,)  + attempts.to_s + " out of 5 incorrect answers remaining."    
                 puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
             end
+            string = "String which contains all kinds of emoji: Sub-Region flag:"
+    TTY::Spinner.new
+    spinner = TTY::Spinner.new("[:spinner] Next Question ...".colorize(:light_magenta,), format: :bouncing_ball)
+    spinner.auto_spin # Automatic animation with default interval
+    sleep(1) # Perform task
+    spinner.stop("Done!".colorize(:light_magenta,)) # Stop animation
+    puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
                 if attempts == 0
                 return game_over
                 end

@@ -6,6 +6,7 @@ require './test_bank.rb'
 require 'colorize'
 require 'artii'
 require 'tty-prompt'
+require 'tty-spinner'
 # -----------------------------------------------------------------------------------------
 # Title Screen.
 def title_scene
@@ -16,7 +17,14 @@ def title_scene
     puts a.asciify('ZOP').colorize(:red,)
     puts "BLAGA STUDIOS™ © 2020".colorize(:light_blue,)
     puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
-    puts "WELCOME TO ZOP....".colorize(:yellow,)
+    puts "WELCOME TO ZOP!".colorize(:yellow,) 
+    puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
+    string = "String which contains all kinds of emoji: Sub-Region flag:"
+    TTY::Spinner.new
+    spinner = TTY::Spinner.new("[:spinner] Loading ...".colorize(:light_magenta,), format: :bouncing_ball)
+    spinner.auto_spin # Automatic animation with default interval
+    sleep(1) # Perform task
+    spinner.stop("Done!".colorize(:light_magenta,)) # Stop animation
     puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
     prompt = TTY::Prompt.new
     choices = [
@@ -48,6 +56,14 @@ def player_name_selection
     name = gets.chomp
     @name = name
     puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
+    string = "String which contains all kinds of emoji: Sub-Region flag:"
+    TTY::Spinner.new
+    spinner = TTY::Spinner.new("[:spinner] Loading ...".colorize(:light_magenta,), format: :bouncing_ball)
+    spinner.auto_spin # Automatic animation with default interval
+    sleep(1) # Perform task
+    spinner.stop("Done!".colorize(:light_magenta,)) # Stop animation
+    puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
+    puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
     puts "Welcome ".colorize(:cyan,) + @name.colorize(:cyan,) + "!".colorize(:cyan,)
     puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
     prompt = TTY::Prompt.new
@@ -72,6 +88,13 @@ def level_path
     system("clear")
     puts a.asciify('Level Selection').colorize(:red,)
     puts "BLAGA STUDIOS™ © 2020".colorize(:light_blue,)
+    puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
+    string = "String which contains all kinds of emoji: Sub-Region flag:"
+    TTY::Spinner.new
+    spinner = TTY::Spinner.new("[:spinner] Loading ...".colorize(:light_magenta,), format: :bouncing_ball)
+    spinner.auto_spin # Automatic animation with default interval
+    sleep(1) # Perform task
+    spinner.stop("Done!".colorize(:light_magenta,)) # Stop animation
     puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
    prompt = TTY::Prompt.new
     choices = [
@@ -104,6 +127,13 @@ def game_rules
     puts "BLAGA STUDIOS™ © 2020".colorize(:light_blue,)
     puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
     puts "Get Zopped...".colorize(:yellow,)
+    puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
+    string = "String which contains all kinds of emoji: Sub-Region flag:"
+    TTY::Spinner.new
+    spinner = TTY::Spinner.new("[:spinner] Loading ...".colorize(:light_magenta,), format: :bouncing_ball)
+    spinner.auto_spin # Automatic animation with default interval
+    sleep(1) # Perform task
+    spinner.stop("Done!".colorize(:light_magenta,)) # Stop animation
     puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
     puts "Choose what level of Zop you wish to play.".colorize(:cyan,)
     puts "Each level has 30 unique questions.".colorize(:cyan,)
@@ -140,6 +170,13 @@ def thank_you
     puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
     puts "Thank you for playing Zop! ".colorize(:yellow,) 
     puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
+    string = "String which contains all kinds of emoji: Sub-Region flag:"
+    TTY::Spinner.new
+    spinner = TTY::Spinner.new("[:spinner] Loading ...".colorize(:light_magenta,), format: :bouncing_ball)
+    spinner.auto_spin # Automatic animation with default interval
+    sleep(1) # Perform task
+    spinner.stop("Done!".colorize(:light_magenta,)) # Stop animation
+    puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
     puts "Sorry to see you go ".colorize(:cyan,) + @name.colorize(:cyan,) + "!".colorize(:cyan,)
     prompt = TTY::Prompt.new
     choices = [
@@ -166,6 +203,13 @@ def game_over
     puts "BLAGA STUDIOS™ © 2020".colorize(:light_blue,)
     puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
     puts "You Zoped out! ".colorize(:yellow,) 
+    puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
+    string = "String which contains all kinds of emoji: Sub-Region flag:"
+    TTY::Spinner.new
+    spinner = TTY::Spinner.new("[:spinner] Loading ...".colorize(:light_magenta,), format: :bouncing_ball)
+    spinner.auto_spin # Automatic animation with default interval
+    sleep(1) # Perform task
+    spinner.stop("Done!".colorize(:light_magenta,)) # Stop animation
     puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
     puts "Better luck next time ".colorize(:cyan,) + @name.colorize(:cyan,) + "!".colorize(:cyan,)
     puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)

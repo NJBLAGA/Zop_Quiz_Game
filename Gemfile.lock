@@ -29,6 +29,11 @@ GEM
       tty-screen (~> 0.8)
       wisper (~> 2.0)
     tty-screen (0.8.1)
+    tty-spinner (0.9.3)
+      tty-cursor (~> 0.7)
+    unicode-emoji (2.7.0)
+      unicode-version (~> 1.0)
+    unicode-version (1.0.0)
     wisper (2.0.1)
 
 PLATFORMS
@@ -39,6 +44,8 @@ DEPENDENCIES
   colorize (~> 0.8.1)
   rspec (~> 3.10)
   tty-prompt (~> 0.22.0)
+  tty-spinner (~> 0.9.3)
+  unicode-emoji (~> 2.7)
 
 BUNDLED WITH
    2.1.4
