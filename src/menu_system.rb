@@ -5,6 +5,7 @@ require './level_three.rb'
 require './test_bank.rb'
 require 'colorize'
 require 'artii'
+require 'tty-prompt'
 # -----------------------------------------------------------------------------------------
 # Title Screen.
 def title_scene
@@ -17,18 +18,21 @@ def title_scene
     puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
     puts "WELCOME TO ZOP....".colorize(:yellow,)
     puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
-    puts "1: Start New Game.".colorize(:magenta,)
-    puts "2: Rules Of Zop.".colorize(:magenta,)
-    puts "3: Exit Game.".colorize(:magenta,)
-    puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
-    case menu_input = gets.chomp.to_i
-    when  1
-        player_name_selection
+    prompt = TTY::Prompt.new
+    choices = [
+        {name: 'Start New Game.', value: 1},
+        {name: 'Rules Of Zop.', value: 2},
+        {name: 'Exit Zop.', value: 3},
+    ]
+    players_input = prompt.select("Select an option:", choices)    
+    case players_input
+    when 1
+    return player_name_selection
     when 2
-        game_rules
+    return game_rules
     when 3
-        game_exit
-    end
+    return game_exit
+    end   
 end
 # -----------------------------------------------------------------------------------------
 # Play Name Selection Screen
@@ -45,14 +49,19 @@ def player_name_selection
     @name = name
     puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
     puts "Welcome ".colorize(:cyan,) + @name.colorize(:cyan,) + "!".colorize(:cyan,)
-    puts "Are you ready to Zop!".colorize(:cyan,) 
     puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
-    puts "Press any key to continue...".colorize(:magenta,)
-    print @name.colorize(:cyan,) + ": ".colorize(:cyan,)
-    start_game = gets.chomp
-    if start_game = " "
+    prompt = TTY::Prompt.new
+    choices = [
+        {name: 'Begin.', value: 1},
+        {name: 'Main Menu.', value: 2},
+    ]
+    players_input = prompt.select("Ready To Zop?", choices)    
+    case players_input
+    when 1
     return level_path
-    end
+    when 2
+    return title_scene
+    end   
 end
 # -----------------------------------------------------------------------------------------
 # Level Selection
@@ -64,13 +73,17 @@ def level_path
     puts a.asciify('Level Selection').colorize(:red,)
     puts "BLAGA STUDIOS™ © 2020".colorize(:light_blue,)
     puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
-    puts "1: Level 1".colorize(:magenta,)
-    puts "2: Level 2".colorize(:magenta,)
-    puts "3: Level 3".colorize(:magenta,)
-    puts "4: Main Menu".colorize(:magenta,)
-    print @name.colorize(:cyan,) + ": ".colorize(:cyan,)
-    case menu_input = gets.chomp.to_i
-    when  1   
+   prompt = TTY::Prompt.new
+    choices = [
+        {name: 'Level 1.', value: 1},
+        {name: 'Level 2.', value: 2},
+        {name: 'Level 3.', value: 3},
+        {name: 'Main Menu.', value: 4},
+    ]
+    players_input = prompt.select("Select Your Level:", choices)    
+    puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
+    case players_input
+    when 1
     return level_one
     when 2
     return level_two
@@ -78,7 +91,7 @@ def level_path
     return level_three
     when 4
     return title_scene
-    end
+    end   
 end
 # -----------------------------------------------------------------------------------------
 # Rules of Zop Screen
@@ -90,7 +103,7 @@ def game_rules
     puts a.asciify('RULES OF ZOP ').colorize(:red,)
     puts "BLAGA STUDIOS™ © 2020".colorize(:light_blue,)
     puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
-    puts "Get Zopped.".colorize(:yellow,)
+    puts "Get Zopped...".colorize(:yellow,)
     puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
     puts "Choose what level of Zop you wish to play.".colorize(:cyan,)
     puts "Each level has 30 unique questions.".colorize(:cyan,)
@@ -103,12 +116,17 @@ def game_rules
     puts "Level 2: Medium & Hard questions.".colorize(:yellow,)
     puts "Level 3: Expert & Zop questions.".colorize(:yellow,)
     puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
-    puts "1: Main Menu.".colorize(:magenta,)
-    case exit_instructions = gets.chomp.to_i
-    when  1
-        system("clear")
+    prompt = TTY::Prompt.new
+    choices = [
+        {name: 'Main Menu.', value: 1},
+    ]
+    players_input = prompt.select("Return To Main Menu.", choices)    
+    puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
+    case players_input
+    when 1
+    system("clear")
     return title_scene
-    end
+    end   
 end
 # -----------------------------------------------------------------------------------------
 # Thank you screen.
@@ -123,16 +141,19 @@ def thank_you
     puts "Thank you for playing Zop! ".colorize(:yellow,) 
     puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
     puts "Sorry to see you go ".colorize(:cyan,) + @name.colorize(:cyan,) + "!".colorize(:cyan,)
-    puts "What would you like to do now?".colorize(:yellow,)
-    puts "1. Main Menu.".colorize(:magenta,)
-    puts "2. Quit Zop.".colorize(:magenta,)
-    print @name.colorize(:cyan,) + ": ".colorize(:cyan,)
-        case next_level_progress = gets.chomp.to_i
-        when 1
-        return title_scene
-        when 2
-        system("exit")
-        end
+    prompt = TTY::Prompt.new
+    choices = [
+        {name: 'Main Menu.', value: 1},
+        {name: 'Quit Zop.', value: 2},
+    ]
+    players_input = prompt.select("Select An Option:", choices)    
+    puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
+    case players_input
+    when 1
+    return title_scene
+    when 2
+    return game_exit
+    end   
 end
 # -----------------------------------------------------------------------------------------
 # Game Over Screen
@@ -148,17 +169,20 @@ def game_over
     puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
     puts "Better luck next time ".colorize(:cyan,) + @name.colorize(:cyan,) + "!".colorize(:cyan,)
     puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
-    puts "What would you like to do now?".colorize(:yellow,)
-    puts "1. Level Selection.".colorize(:magenta,)
-    puts "2. Quit Zop.".colorize(:magenta,)
-    print @name.colorize(:cyan,) + ": ".colorize(:cyan,)
-        case next_level_progress = gets.chomp.to_i
-        when 1
-        return level_path
-        when 2
-        system("exit")
-        end
-end
+    prompt = TTY::Prompt.new
+    choices = [
+        {name: 'Level Selection.', value: 1},
+        {name: 'Quit Zop.', value: 2},
+    ]
+    players_input = prompt.select("Select An Option:", choices)    
+    puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
+    case players_input
+    when 1
+    return level_path
+    when 2
+    return game_exit
+    end   
+end 
 # -----------------------------------------------------------------------------------------  
 # Exit The Game
 def game_exit
