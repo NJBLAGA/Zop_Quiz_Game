@@ -45,6 +45,7 @@ def exe_game(questions)
     puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
     question_number += 1
     print @name.colorize(:cyan,) + ": ".colorize(:cyan,)
+    while
     answer = gets.chomp()
     valid = Validators.validate_correct_input(answer)
     if !valid   
@@ -52,9 +53,11 @@ def exe_game(questions)
         puts "Invalid answer!".colorize(:red,)
         puts "Please enter either a,b,c,d as your answer.".colorize(:light_magenta,)
     puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
-        answer = gets.chomp()
-    else
+        # answer = gets.chomp()
+    else valid
+    break
     end
+end
     if answer == question.answer
                 score += 1
                 puts "Correct Answer!".colorize(:green,)
