@@ -1,5 +1,4 @@
 require './zop.rb'
-require './zop_helper.rb'
 require './level_one.rb'
 require './level_two.rb'
 require './level_three.rb'
@@ -241,10 +240,30 @@ end
 def game_exit
     system("exit")
 end
-# -----------------------------------------------------------------------------------------  
-# Exe Game - Zop ////////////
-# -----------------------------------------------------------------------------------------  
-title_scene
-# -----------------------------------------------------------------------------------------  
+# -----------------------------------------------------------------------------------------
 # Command Line - Zop Helper
+def gets
+    STDIN.gets
+  end
+
+system("clear")
+puts "Welcome to Zop Helper!".colorize(:yellow,)
+puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
+puts "To view rules type the following:".colorize(:cyan,)
+puts "ruby zop_helper.rb -r".colorize(:light_magenta,)
+puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
+if ARGV.length > 0
+  # handle command line arguments
+  if ARGV[0] == '-r' || ARGV[0] == '--rules'
+    # print the rules menu
+    puts "Choose what level of Zop you wish to play.".colorize(:cyan,)
+    puts "Each level has 30 unique questions.".colorize(:cyan,)
+    puts "Answer 10 questions correctly to beat the level and progress.".colorize(:cyan,)
+    puts "Answer 5 questions incorrectly and game over.".colorize(:cyan,)
+    puts "Question difficulty will dramatically increase as you progress through the levels. ".colorize(:cyan,)
+    puts "Have fun! ".colorize(:cyan,)
+  end
+  else 
+    title_scene
+  end
 
