@@ -50,7 +50,7 @@ def exe_game(questions)
     valid = Validators.validate_correct_input(answer)
     if !valid   
     puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
-        puts "Invalid answer!".colorize(:red,)
+        puts "Invalid Answer!".colorize(:red,)
         puts "Please enter either a,b,c,d as your answer.".colorize(:light_magenta,)
     puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
     else valid
