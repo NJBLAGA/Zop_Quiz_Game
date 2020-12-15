@@ -2,7 +2,7 @@
 
 module Validators
     def self.validate_correct_input(answer)
-      if answer == "a" 
+      if answer == "a"
         return true
       elsif answer == "b" 
         return true
