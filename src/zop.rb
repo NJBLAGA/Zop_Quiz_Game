@@ -1,5 +1,6 @@
 # Gems used through bundler.
 require './test_bank.rb'
+require './validators.rb'
 require 'colorize'
 require 'artii'
 require 'tty-spinner'
@@ -34,10 +35,10 @@ def exe_game(questions)
     spinner.auto_spin # Automatic animation with default interval
     sleep(1) # Perform task
     spinner.stop("Done!".colorize(:light_magenta,)) # Stop animation
-    puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
+    puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
     for question in questions.shuffle
     break if score == 10
-    puts "Question: ".colorize(:magenta,) + question_number.to_s 
+    puts "Question: ".colorize(:light_magenta,) + question_number.to_s 
     puts "Difficulty: ".colorize(:yellow,) + question.difficulty.to_s
     puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
     puts question.content
@@ -45,27 +46,36 @@ def exe_game(questions)
     question_number += 1
     print @name.colorize(:cyan,) + ": ".colorize(:cyan,)
     answer = gets.chomp()
-            if answer == question.answer
+    valid = Validators.validate_correct_input(answer)
+    if !valid   
+    puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
+        puts "Invalid answer!".colorize(:red,)
+        puts "Please enter either a,b,c,d as your answer.".colorize(:light_magenta,)
+    puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
+        answer = gets.chomp()
+    else
+    end
+    if answer == question.answer
                 score += 1
                 puts "Correct Answer!".colorize(:green,)
                 puts @name.colorize(:yellow,) + "'s ".colorize(:yellow,)  + "Progress: ".colorize(:yellow,)  + score.to_s + " out of 10 questions correct."    
                 puts @name.colorize(:yellow,) + "'s ".colorize(:yellow,)  + "Progress: ".colorize(:yellow,)  + attempts.to_s + " out of 5 incorrect answers remaining."    
-                puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,) 
+    puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,) 
             else
                 attempts -= 1
                 puts "Incorrect Answer!".colorize(:red,)
                 puts "The Correct answer: ".colorize(:green,) + question.answer
                 puts @name.colorize(:yellow,) + "'s ".colorize(:yellow,) + "Progress: ".colorize(:yellow,)  + score.to_s + " out of 10 questions correct."    
                 puts @name.colorize(:yellow,) + "'s ".colorize(:yellow,) + "Progress: ".colorize(:yellow,)  + attempts.to_s + " out of 5 incorrect answers remaining."    
-                puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
+    puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
             end
-            string = "String which contains all kinds of emoji: Sub-Region flag:"
+    string = "String which contains all kinds of emoji: Sub-Region flag:"
     TTY::Spinner.new
     spinner = TTY::Spinner.new("[:spinner] Next Question ...".colorize(:light_magenta,), format: :bouncing_ball)
     spinner.auto_spin # Automatic animation with default interval
     sleep(1) # Perform task
     spinner.stop("Done!".colorize(:light_magenta,)) # Stop animation
-    puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
+    puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
                 if attempts == 0
                 return game_over
                 end
@@ -81,10 +91,10 @@ def contine_screen
             system("clear")
             puts a.asciify('CONGRATULATIONS').colorize(:red,)
             puts "BLAGA STUDIOS™ © 2020".colorize(:light_blue,)
-            puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
+    puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
             puts @name.colorize(:cyan,)+ "!".colorize(:cyan,)
             puts "You Zopped that! ".colorize(:cyan,)
-            puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
+    puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
             puts "Are you ready to continue playing Zop?".colorize(:yellow,)
             puts "1. Zop me in!".colorize(:magenta,)
             puts "2. I'm all Zoped out!".colorize(:magenta,)

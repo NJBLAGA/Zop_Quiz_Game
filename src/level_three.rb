@@ -11,7 +11,7 @@ def level_three
     system("clear")
     puts a.asciify('Level 3').colorize(:red,)
     puts "BLAGA STUDIOS™ © 2020".colorize(:light_blue,)
-    puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
+    puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
     questions = [
         Question.new(Q61, "a", "Expert"),
         Question.new(Q62, "a", "Expert"),

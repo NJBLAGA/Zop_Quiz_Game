@@ -12,7 +12,7 @@ def level_one
     system("clear")
     puts a.asciify('Level 1').colorize(:red,)
     puts "BLAGA STUDIOS™ © 2020".colorize(:light_blue,)
-    puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
+    puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
     questions = [
         Question.new(Q01, "a", "Novice"),
         Question.new(Q02, "d", "Novice"),
