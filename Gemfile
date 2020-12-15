@@ -14,6 +14,4 @@ gem "rspec", "~> 3.10"
 
 gem "tty-prompt", "~> 0.22.0"
 
-gem "unicode-emoji", "~> 2.7"
-
 gem "tty-spinner", "~> 0.9.3"

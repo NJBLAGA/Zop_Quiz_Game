@@ -1,5 +1,6 @@
 # Gems used through bundler.
 require './test_bank.rb'
+require './zop_helper.rb'
 require 'colorize'
 require 'artii'
 require 'tty-spinner'
@@ -95,6 +96,7 @@ def contine_screen
             return thank_you
             end
 end
+# -----------------------------------------------------------------------------------------
 
 
 

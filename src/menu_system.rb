@@ -1,4 +1,5 @@
 require './zop.rb'
+require './zop_helper.rb'
 require './level_one.rb'
 require './level_two.rb'
 require './level_three.rb'
@@ -135,12 +136,20 @@ def game_rules
     sleep(1) # Perform task
     spinner.stop("Done!".colorize(:light_magenta,)) # Stop animation
     puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
+    puts "Rules:".colorize(:light_magenta,)
+    puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
     puts "Choose what level of Zop you wish to play.".colorize(:cyan,)
     puts "Each level has 30 unique questions.".colorize(:cyan,)
     puts "Answer 10 questions correctly to beat the level and progress.".colorize(:cyan,)
     puts "Answer 5 questions incorrectly and game over.".colorize(:cyan,)
     puts "Question difficulty will dramatically increase as you progress through the levels. ".colorize(:cyan,)
     puts "Have fun! ".colorize(:cyan,)
+    puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
+    puts "Instructions:".colorize(:light_magenta,)
+    puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
+    puts "During each level when a question is displayed, answer by typing either: (a,b,c,d).".colorize(:cyan,)
+    puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
+    puts "Difficulty:".colorize(:light_magenta,)
     puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
     puts "Level 1: Novice & Easy questions.".colorize(:yellow,)
     puts "Level 2: Medium & Hard questions.".colorize(:yellow,)
@@ -237,6 +246,5 @@ end
 # -----------------------------------------------------------------------------------------  
 title_scene
 # -----------------------------------------------------------------------------------------  
-
-
+# Command Line - Zop Helper
 
