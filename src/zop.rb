@@ -60,15 +60,15 @@ end
     if answer == question.answer
                 score += 1
                 puts "Correct Answer!".colorize(:green,)
-                puts @name.colorize(:yellow,) + "'s ".colorize(:yellow,)  + "Progress: ".colorize(:yellow,)  + score.to_s + " out of 10 questions correct."    
-                puts @name.colorize(:yellow,) + "'s ".colorize(:yellow,)  + "Progress: ".colorize(:yellow,)  + attempts.to_s + " out of 5 incorrect answers remaining."    
+                puts @name.colorize(:yellow,) + "'s ".colorize(:yellow,)  + "Progress: ".colorize(:yellow,)  + score.to_s + " out of 10 Questions Correct."    
+                puts @name.colorize(:yellow,) + "'s ".colorize(:yellow,)  + "Progress: ".colorize(:yellow,)  + attempts.to_s + " out of 5 Incorrect Answers Remaining."    
     puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,) 
             else
                 attempts -= 1
                 puts "Incorrect Answer!".colorize(:red,)
-                puts "The Correct answer: ".colorize(:green,) + question.answer
-                puts @name.colorize(:yellow,) + "'s ".colorize(:yellow,) + "Progress: ".colorize(:yellow,)  + score.to_s + " out of 10 questions correct."    
-                puts @name.colorize(:yellow,) + "'s ".colorize(:yellow,) + "Progress: ".colorize(:yellow,)  + attempts.to_s + " out of 5 incorrect answers remaining."    
+                puts "The Correct Answer: ".colorize(:green,) + question.answer
+                puts @name.colorize(:yellow,) + "'s ".colorize(:yellow,) + "Progress: ".colorize(:yellow,)  + score.to_s + " out of 10 Questions Correct."    
+                puts @name.colorize(:yellow,) + "'s ".colorize(:yellow,) + "Progress: ".colorize(:yellow,)  + attempts.to_s + " out of 5 Incorrect Answers Remaining."    
     puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
             end
     string = "String which contains all kinds of emoji: Sub-Region flag:"
@@ -95,7 +95,7 @@ def contine_screen
             puts "BLAGA STUDIOS™ © 2020".colorize(:light_blue,)
     puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
             puts @name.colorize(:cyan,)+ "!".colorize(:cyan,)
-            puts "You Zopped that! ".colorize(:cyan,)
+            puts "You Zopped That! ".colorize(:cyan,)
     puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
             puts "Are you ready to continue playing Zop?".colorize(:yellow,)
             puts "1. Zop me in!".colorize(:magenta,)
