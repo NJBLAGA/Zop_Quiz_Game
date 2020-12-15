@@ -53,7 +53,6 @@ def exe_game(questions)
         puts "Invalid answer!".colorize(:red,)
         puts "Please enter either a,b,c,d as your answer.".colorize(:light_magenta,)
     puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
-        # answer = gets.chomp()
     else valid
     break
     end
