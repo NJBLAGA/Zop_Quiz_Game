@@ -2,6 +2,7 @@
 require './test_bank.rb'
 require 'colorize'
 require 'artii'
+require 'tty-spinner'
 # -----------------------------------------------------------------------------------------
 # Player_name class.
 
