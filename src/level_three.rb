@@ -10,7 +10,9 @@ def level_three
     a.asciify('Level 3')
     system("clear")
     puts a.asciify('Level 3').colorize(:red,)
+    # Artii formatting.
     puts "BLAGA STUDIOS™ © 2020".colorize(:light_blue,)
+    # Trademark.
     puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
     questions = [
         Question.new(Q61, "a", "Expert"),
@@ -44,6 +46,9 @@ def level_three
         Question.new(Q89, "d", "Zop"),
         Question.new(Q90, "a", "Zop"),
     ]
+    # Level 3 questions array with 30 unique Questions.
+    # Each Question in the array has an assigned variable from the question bank alongside correct answer and corresponding difficulty.
     return exe_game(questions) 
+    # Using the above array, level 1 returns the exe_game(questions) method and runs the quiz using the above questions.
   end
   # -----------------------------------------------------------------------------------------

@@ -62,7 +62,11 @@ questions = [
 # Testing questions array with 5 unique Questions.
 # Each Question in the array has an assigned variable from the question bank alongside correct answer and corresponding difficulty. 
 # Using the above array, level 1 returns the exe_game(questions) method and runs the quiz using the above questions.
-
+# -----------------------------------------------------------------------------------------
+# Variables for testing: score and attempts.
+score = 0
+attempts = 5
+# -----------------------------------------------------------------------------------------
 for question in questions
 # Run a for loop and iterate through all 5 Question elements in the questions array.
     puts question.content
@@ -74,13 +78,30 @@ for question in questions
         puts "------------------------------------------"
         puts "match"
         # If true and answer == question.answer display match.
+        score += 1
+        # If true and answer == question.answer add 1 to score variable.
         puts "------------------------------------------"
-        else 
+        puts "Score: " + score.to_s
+        # Display current score.
+        puts "Attempts left: " + attempts.to_s
+        # Display current attempts remaining.
+        puts "------------------------------------------"
+    else 
         puts "------------------------------------------"
         puts "no match"
         # If false and answer does not == question.answer display no match.
+        attempts -= 1
+        # If false and answer does not == question.answer subtract 1 from attempt variable.
+        puts "------------------------------------------"
+        puts score.to_s
+        # Display current score.
+        puts attempts.to_s
+        # Display current attempts remaining.
         puts "------------------------------------------"
         puts question.answer
         # If false and answer does not == question.answer display correct answer to the question.
     end
 end
+
+
+

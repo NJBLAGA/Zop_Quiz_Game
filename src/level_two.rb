@@ -10,7 +10,9 @@ def level_two
     a.asciify('LEVEL 2')
     system("clear")
     puts a.asciify('Level 2').colorize(:red,)
+    # Artii formatting.
     puts "BLAGA STUDIOS™ © 2020".colorize(:light_blue,)
+    # Trademark.
     puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
     questions = [
         Question.new(Q31, "a", "Medium"),
@@ -44,6 +46,9 @@ def level_two
         Question.new(Q59, "a", "Hard"),
         Question.new(Q60, "c", "Hard"),
     ]
+    # Level 2 questions array with 30 unique Questions.
+    # Each Question in the array has an assigned variable from the question bank alongside correct answer and corresponding difficulty.
     return exe_game(questions) 
+    # Using the above array, level 1 returns the exe_game(questions) method and runs the quiz using the above questions.
   end
   # -----------------------------------------------------------------------------------------

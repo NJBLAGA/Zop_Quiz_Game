@@ -4,6 +4,9 @@ require 'artii'
 require 'tty-prompt'
 # -----------------------------------------------------------------------------------------
 # Questions Bank.
+# All 3 levels contain 30 questions each.
+# Each question is assigned to a variable Q01 - Q90.
+# Each question has its correct answer displayed.
 # -----------------------------------------------------------------------------------------
 # Level 1
 # Novice Questions:
