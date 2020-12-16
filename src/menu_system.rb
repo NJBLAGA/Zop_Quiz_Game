@@ -1,3 +1,4 @@
+# require '../README.md'
 require './zop.rb'
 require './level_one.rb'
 require './level_two.rb'
@@ -302,12 +303,13 @@ def gets
 system("clear")
 if ARGV.length > 0
   # handle command line arguments
-  if ARGV[0] == '-r' || ARGV[0] == '--rules'
-    # If player types ruby menu_system.rb -r or ruby menu_system.rb --rules it will print the rules menu.
-    puts "Welcome to Zop Helper!".colorize(:yellow,)
-    # Displays to the player a welcoming message.
-    # Displays to the player the rules and instructions of Zop.
-    puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
+      puts "Welcome to Zop Helper!".colorize(:yellow,)
+   puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
+   # Displays to the player a welcoming message.
+   # Displays to the player the rules and instructions of Zop.
+  if ARGV[0] == '-r' 
+    # If player types ruby menu_system.rb -r 
+    # Zop Helper it will print the rules Of Zop.
     puts "Rules:".colorize(:light_magenta,)
     puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
     puts "Choose what level of Zop you wish to play.".colorize(:cyan,)
@@ -317,12 +319,32 @@ if ARGV.length > 0
     puts "Question difficulty will dramatically increase as you progress through the levels. ".colorize(:cyan,)
     puts "Have fun! ".colorize(:cyan,)
     puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
+  elsif ARGV[0] == '-i'
+    # If player types ruby menu_system.rb -i
+    # Zop Helper it will print the Instructions For Zop.
     puts "Instructions:".colorize(:light_magenta,)
     puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
     puts "During each level when a question is displayed, answer by typing either: (a,b,c,d).".colorize(:cyan,)
-  end
-  else 
+    puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
+elsif ARGV[0] == '-d'
+    # If player types ruby menu_system.rb -d
+    # Zop Helper will print the 3 levels of Zop and their difficulties.
+    puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
+    puts "Difficulty:".colorize(:light_magenta,)
+    puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
+    puts "Level 1: Novice & Easy questions.".colorize(:yellow,)
+    puts "Level 2: Medium & Hard questions.".colorize(:yellow,)
+    puts "Level 3: Expert & Zop questions.".colorize(:yellow,)
+    puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
+# elsif ARGV[0] == '-h'
+#     # If player types ruby menu_system.rb -h
+#     # Zop Helper will print the Readme file for Zop.
+#     print '../README.md'
+    end
+    else 
     title_scene
     # If player types ruby menu_system.rb without any arguments it will run the game like normal.
 end
+
+
 
