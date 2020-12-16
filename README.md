@@ -29,16 +29,37 @@ Any user who plays Zop will find themseleves in side one of its challeneing leve
 
 Zop isnt your average quiz game, it provides the player with a fun and entertaing experience. This is due to its interesting and diverse features. Below are Zop's listed features, describing how each feature works and their intended functions.
 
-**Main Menu Sytem:** The entire game of zop is interconnected thorugh a menu system. This system allows the user to navigate inbetween menus all the way from the title page to any of the 3 levels provided, to an indepth rules and isntructions page. The menu system was devleoped with a test driven development approach. All functions and pathways provided by the system have been tested and constructed to ensure no errors can occur.
+**Main Menu Sytem:**
 
-**End of question panel:** The game Zop consists of 3 different levels all with 30 unquie questions with increasing diffucilties. The player is asked at random one of the 30 questions for that level. The player is then prompted to answer either a,b,c or d. Zop will then display an end of question panel in which several key stats are provided. The user will be shown if the inputed the correct answer. If the inputed answer was correct, Zop will then display their current score and attempts remaining. If the inputed answer was incorrect, Zop will inform the player that, the inputed answer was incorrect, provide the correct answer, display the players current score and attempts remaining. This feature allows the player to have a play by play view on how the game is progressing after each question.
+![Trellowboard -Features](./docs/img/in_game_main_menu.png)
 
-**Question difficulty:** Zop displays the diffcuilty of each question as it is presented to the player. This will aid in illstrating to the player the level of diffuculty pool the question derives from.
+![Trellowboard -Features](./doc/img/../../docs/img/in_game_begin.png)
 
-**Invalid inputed answer:**Another interesting feature is that of invalid input prompts.
+The entire game of zop is interconnected thorugh a menu system. This system allows the user to navigate inbetween menus all the way from the title page to any of the 3 levels provided, to an indepth rules and isntructions page. The menu system was devleoped with a test driven development approach. All functions and pathways provided by the system have been tested and constructed to ensure no errors can occur.
+
+**End of question panel:**
+
+![Trellowboard -Features](./doc/img/../../docs/img/in_game_correct%20answer.png)
+![Trellowboard -Features](./doc/img/../../docs/img/in_game_incorrect_answer.png)
+
+ The game Zop consists of 3 different levels all with 30 unquie questions with increasing diffucilties. The player is asked at random one of the 30 questions for that level. The player is then prompted to answer either a,b,c or d. Zop will then display an end of question panel in which several key stats are provided. The user will be shown if the inputed the correct answer. If the inputed answer was correct, Zop will then display their current score and attempts remaining. If the inputed answer was incorrect, Zop will inform the player that, the inputed answer was incorrect, provide the correct answer, display the players current score and attempts remaining. This feature allows the player to have a play by play view on how the game is progressing after each question.
+
+**Question difficulty:**
+
+Zop displays the diffcuilty of each question as it is presented to the player. This will aid in illstrating to the player the level of diffuculty pool the question derives from.
+
+**Invalid inputed answer:**
+
+![Trellowboard -Features](./img/../docs/img/in_game_invalid_input.png)
+
+Another interesting feature is that of invalid input prompts.
 If the user inputs an answer that is not a,b,c or d, then they are promoted to try agian till the input one of the 4 correct inputs. The user will not lose any attempts for an invalid inputed answer.
 
-**Rules/Instruction Menu:** Another interesting feature of Zop is that of its rules and instructions menu. This menu can be accessed through the main menu or by command line arguments . These command lines arguments can be found below in the zop-helper section. The rules and intrustions menu aid the player in explaining how the game is run and played. It also instructs the player on the requirements of completing any given level and the attempts remaining system.
+**Rules/Instruction Menu:**
+
+![Trellowboard -Features](./docs/img/in_game_rules_menu.png)
+
+Another interesting feature of Zop is that of its rules and instructions menu. This menu can be accessed through the main menu or by command line arguments . These command lines arguments can be found below in the zop-helper section. The rules and intrustions menu aid the player in explaining how the game is run and played. It also instructs the player on the requirements of completing any given level and the attempts remaining system.
 
 ## **User Interaction and experience:**
 
@@ -50,22 +71,153 @@ The end of question panel feature provided by Zop to the player help to enhance 
 
 Below Zop intial control flow and desgin is shown. The desgin was kept intact from then inital desgin to the current version of the game.
 
-![Control Flow of Zop](./docs/Zop_system_flowchart.jpg)
+![Control Flow of Zop](./docs/Control%20Flow%20For%20Zop.png)
 
 ## **Implementation Plan:**
 
-![Homepage Desktop View](./tre)
+An implementation plan was created to set out how each feature of Zop would be developed and implemented over a set amount of time. Each feature included a checklist containing  components and tasks vital to the completion and implmentation of said feature. Each feature and its checklist items had been assigned a prioritation and timeframe in which they were to be desgined and intergrated into Zop. Below are images depicting the final state of the implementation plan. All features and checklist items were completed within time frames and all bugs and errors were resolved.
+
+![Trellowboard -Features](./docs/img/trelloboard.png)
+![Trellowboard -Features](./docs/img/main_menu.png)
+![Trellowboard -Features](./docs/img/question_panel.png)
+![Trellowboard -Features](./docs/img/rules_instructions.png)
+![Trellowboard -Features](./docs/img/difficulty.png)
+![Trellowboard -Features](./docs/img/desgin_layout.png)
 
 ## **Testing:**
 
+During the development of Zop, two main tests were manually conducted to ensure the game was running as expected. Additionally these tests aided in error handling and refining the game's code to ensure no errors would arise. It should be noted these tests help mold the final code and lent some of their operations and components to the game.
+
+**The two tests were named:**
+
+- correct_answer_testing.rb
+- score_attempts_testing.rb
+
+### **correct_answer_testing.rb**
+
+The below test was created and run to check if the game was recieving an inputed answer from the player. Once recieved the test checks if the code is cross referencing that answer with the correct answer located within the questions array. Once cross refernced the test returns whether the two answers were a match or not. This test served as the backbone of testing Zop. It contains the same for loop and if statement found in the actually code. However instead of returning information to the player, it was assgined a simple match, no match paramter. After running the test on several questions, the results earning a matched response were crossed refernced by hand with the bank of answers I had for all questions. This was a second layer of testing to ensure any information displayed to the player are correct and accurate.
+
+![Trellowboard -Features](./docs/img/correct_answer_testing_match.png)
+![Trellowboard -Features](./doc/img/../../docs/img/correct_answer_testing_no_match.png)
+
+While the first test case was using inputs of "a","b","c" and "d". A second test case was run in which other inputs were entered such as "1","hghfjf" and variours other inputed strings. This displayed a no match result and put forward a serious issue regarding error handling. If the correct answer to a question was "a", "b" "c" and "d" would provide an incorrect answer yes. But any mistypying or slip of a finger could see the player being penalised. A validation was implmented to make sure that only answers of "a" "b" "c" and "d" would be accepted. This resulted in a error free experience during gameplay.
+
+```ruby
+# Testing questions array with 5 unique Questions.
+# Each Question in the array has an assigned variable from the question bank alongside correct answer and corresponding difficulty. 
+# Using the above array, level 1 returns the exe_game(questions) method and runs the quiz using the above questions.
+
+for question in questions
+# Run a for loop and iterate through all 5 Question elements in the questions array.
+    puts question.content
+    # Prompt user with a question.
+    answer = gets.chomp()
+    # Gets is used to to obtain inputed answer.
+    if answer == question.answer
+    # If statement is used to check inputed answer == question.answer stored in the array .
+        puts "------------------------------------------"
+        puts "match"
+        # If true and answer == question.answer display match.
+        puts "------------------------------------------"
+        else 
+        puts "------------------------------------------"
+        puts "no match"
+        # If false and answer does not == question.answer display no match.
+        puts "------------------------------------------"
+        puts question.answer
+        # If false and answer does not == question.answer display correct answer to the question.
+    end
+end
+```
+
+### **score_attempts_testing.rb**
+
+The below test was designed and run to check if the code was assgining the right action to score and attempts remaining. If the player entered a correct answer, their score would inscrease by 1. While if the player entered a incorrect answer, their attempt would decrease by 1. The below test like the correct_answer_testing.rb takes the inputed answer by the player and cross-references it agianst the stored answer in the question array. However it adds 1 to score if correct and subtracts 1 from attempt if incorrect.
+
+![Trellowboard -Features](./doc/img/../../docs/img/score_attempts_testing.png)
+
+![Trellowboard -Features](./doc/img/../../docs/img/score_attempts_testing_invalid_answer.png)
+
+Running test cases of "a","b","c" and "d" resulted in the code and test performing as intended. However what was discovered from this was that like the previous testing, any input other then "a","b","c" and "d" would not only result in an incorrect answer, but reduce the attempts remaining. The code was picking up on the entered answer and running it by the stored answer. This resulted in the code assuming it to be an incorrect answer and reducing the attempts remaining by 1. This was an issue as the game could not distinguish between an incorrect inputed answer and a mistype or error handling. This resulted in a validation being implmented to make sure that only answers of "a" "b" "c" and "d" would be accepted. Intergrating this into the code meant that an error in the players inputed answer, was not considered vaild. This in turn through a loop allowed the game to prompt the user agian and agian for a correct input. This in turn also prevented the game from reducing the attempts remaining if the player provided an invalid answer.
+
+```ruby
+# Testing questions array with 5 unique Questions.
+# Each Question in the array has an assigned variable from the question bank alongside correct answer and corresponding difficulty. 
+# Using the above array, level 1 returns the exe_game(questions) method and runs the quiz using the above questions.
+# -----------------------------------------------------------------------------------------
+# Variables for testing: score and attempts.
+score = 0
+attempts = 5
+# -----------------------------------------------------------------------------------------
+for question in questions
+# Run a for loop and iterate through all 5 Question elements in the questions array.
+    puts question.content
+    # Prompt user with a question.
+    answer = gets.chomp()
+    # Gets is used to to obtain inputed answer.
+    if answer == question.answer
+    # If statement is used to check inputed answer == question.answer stored in the array .
+        puts "------------------------------------------"
+        puts "match"
+        # If true and answer == question.answer display match.
+        score += 1
+        # If true and answer == question.answer add 1 to score variable.
+        puts "------------------------------------------"
+        puts "Score: " + score.to_s
+        # Display current score.
+        puts "Attempts left: " + attempts.to_s
+        # Display current attempts remaining.
+        puts "------------------------------------------"
+    else 
+        puts "------------------------------------------"
+        puts "no match"
+        # If false and answer does not == question.answer display no match.
+        attempts -= 1
+        # If false and answer does not == question.answer subtract 1 from attempt variable.
+        puts "------------------------------------------"
+        puts "Score: " + score.to_s
+        # Display current score.
+        puts "Attempts left: " + attempts.to_s
+        # Display current attempts remaining.
+        puts "------------------------------------------"
+        puts question.answer
+        # If false and answer does not == question.answer display correct answer to the question.
+    end
+end
+
+```
+
 ## **Instructions:**
-
-### **Installation:**
-
-### **Dependencies:**
 
 ### **System requirements:**
 
-## **Zop_Helper:**
+- Win32/Console/ANSI (for Windows)
 
-## **Screenshots:**
+### **Dependencies:**
+
+- gem "artii", "~> 2.1"
+
+- gem "colorize", "~> 0.8.1"
+
+- gem "rspec", "~> 3.10"
+
+- gem "tty-prompt", "~> 0.22.0"
+
+- gem "tty-spinner", "~> 0.9.3"
+
+### **Installation:**
+
+- ./install_zop.sh
+
+### **Run:**
+
+- ./run_zop.sh
+
+### **Zop_Helper:**
+
+- ruby zop_helper.rb -r
+  - Run to display zop_helper rules.
+- ruby zop_helper.rb -i
+  - Run to display zop_helper instructions.
+- ruby zop_helper.rb -d
+  - Run to display zop_helper difficulties.

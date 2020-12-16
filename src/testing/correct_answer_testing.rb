@@ -84,3 +84,4 @@ for question in questions
         # If false and answer does not == question.answer display correct answer to the question.
     end
 end
+

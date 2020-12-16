@@ -93,9 +93,9 @@ for question in questions
         attempts -= 1
         # If false and answer does not == question.answer subtract 1 from attempt variable.
         puts "------------------------------------------"
-        puts score.to_s
+        puts "Score: " + score.to_s
         # Display current score.
-        puts attempts.to_s
+        puts "Attempts left: " + attempts.to_s
         # Display current attempts remaining.
         puts "------------------------------------------"
         puts question.answer
