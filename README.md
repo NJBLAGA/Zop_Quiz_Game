@@ -50,11 +50,11 @@ The end of question panel feature provided by Zop to the player help to enhance 
 
 Below Zop intial control flow and desgin is shown. The desgin was kept intact from then inital desgin to the current version of the game.
 
-![Control Flow of Zop](./docs/Control%20Flow%20For%20Zop.png)
+![Control Flow of Zop](./docs/Zop_system_flowchart.jpg)
 
 ## **Implementation Plan:**
 
-![Homepage Desktop View](./docs/Screenshots/tre)
+![Homepage Desktop View](./tre)
 
 ## **Testing:**
 
