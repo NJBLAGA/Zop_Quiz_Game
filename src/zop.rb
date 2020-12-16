@@ -41,7 +41,7 @@ def exe_game(questions)
     spinner.auto_spin # Automatic animation with default interval
     sleep(1) # Perform task
     spinner.stop("Done!".colorize(:light_magenta,)) # Stop animation
-    # tty-spinner formating.
+    # tty-spinner formatting.
     puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
     for question in questions.shuffle
     # For loop to iterate through each question in the questions array in a random(shuffled order).
@@ -98,8 +98,7 @@ end
     spinner = TTY::Spinner.new("[:spinner] Next Question ...".colorize(:light_magenta,), format: :bouncing_ball)
     spinner.auto_spin # Automatic animation with default interval
     sleep(1) # Perform task
-    spinner.stop("Done!".colorize(:light_magenta,)) # Stop animation
-    # tty-spinner formating.
+    # tty-spinner formatting.
     puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
     if attempts == 0
     # If score reaches 0(5 questions answered incorrectly).
