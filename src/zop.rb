@@ -37,7 +37,7 @@ def exe_game(questions)
     # Variable assigned to the current question number.
     string = "String which contains all kinds of emoji: Sub-Region flag:"
     TTY::Spinner.new
-    spinner = TTY::Spinner.new("[:spinner] Loading Level ...".colorize(:light_magenta,), format: :bouncing_ball)
+    spinner = TTY::Spinner.new("[:spinner] Fetching Next Question ...".colorize(:light_magenta,), format: :bouncing_ball)
     spinner.auto_spin # Automatic animation with default interval
     sleep(1) # Perform task
     spinner.stop("Done!".colorize(:light_magenta,)) # Stop animation
@@ -95,9 +95,10 @@ end
     end
     string = "String which contains all kinds of emoji: Sub-Region flag:"
     TTY::Spinner.new
-    spinner = TTY::Spinner.new("[:spinner] Next Question ...".colorize(:light_magenta,), format: :bouncing_ball)
+    spinner = TTY::Spinner.new("[:spinner] Fetching Next Question ...".colorize(:light_magenta,), format: :bouncing_ball)
     spinner.auto_spin # Automatic animation with default interval
     sleep(1) # Perform task
+    spinner.stop("Done!".colorize(:light_magenta,)) # Stop animation
     # tty-spinner formatting.
     puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
     if attempts == 0
