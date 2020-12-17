@@ -272,6 +272,8 @@ Results below:
 
 - gem "colorize", "~> 0.8.1"
 
+- gem "rspec", "~> 3.10"
+
 - gem "tty-prompt", "~> 0.22.0"
 
 - gem "tty-spinner", "~> 0.9.3"
@@ -295,4 +297,4 @@ Results below:
 
 ### **Reference List:**
 
-(Who wants to be a G MAN) --DO TONIGHT
+*Who Wants to be a Millionaire: The Quiz Book* 2000, Pan Macmillan Ausstralia, Sydney, Australia.
