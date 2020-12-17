@@ -37,7 +37,7 @@ Zop isnt your average quiz game, it provides the player with a fun and entertain
 
 The entire game of zop is interconnected thorugh a menu system. This system allows the user to navigate inbetween menus all the way from the title page to any of the 3 levels provided, to an indepth rules and isntructions page. The menu system was devleoped with a test driven development approach. All functions and pathways provided by the system have been tested and constructed to ensure no errors can occur.
 
-**End of question panel:**
+**Player Progression Display:**
 
 ![Zop - Level 1 - Correct Answer.](./doc/img/../../docs/img/in_game_correct%20answer.png)
 ![Zop - Level 1 - Incorrect Answer.](./doc/img/../../docs/img/in_game_incorrect_answer.png)
@@ -45,6 +45,8 @@ The entire game of zop is interconnected thorugh a menu system. This system allo
  The game Zop consists of 3 different levels all with 30 unquie questions with increasing diffucilties. The player is asked at random one of the 30 questions for that level. The player is then prompted to answer either a,b,c or d. Zop will then display an end of question panel in which several key stats are provided. The user will be shown if the inputed the correct answer. If the inputed answer was correct, Zop will then display their current score and attempts remaining. If the inputed answer was incorrect, Zop will inform the player that, the inputed answer was incorrect, provide the correct answer, display the players current score and attempts remaining. This feature allows the player to have a play by play view on how the game is progressing after each question.
 
 **Question difficulty:**
+
+![Zop - Level 1 - Invalid Answer.]()
 
 Zop displays the diffcuilty of each question as it is presented to the player. This will aid in illstrating to the player the level of diffuculty pool the question derives from.
 
