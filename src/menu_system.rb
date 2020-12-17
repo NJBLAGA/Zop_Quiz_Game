@@ -64,9 +64,23 @@ def player_name_selection
     puts "BLAGA STUDIOS™ © 2020".colorize(:light_blue,)
     # Trademark.
     puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
-    puts "What is your name?".colorize(:yellow,)
-    name = gets.chomp 
+    status = true
+while status
+    puts "Please enter your name:".colorize(:yellow,)
+    puts "(15 Character Limit)".colorize(:light_magenta,)
+    puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
+    name = gets.chomp
     @name = name
+    if name.length > 15
+        puts "You have entered to many characters!".colorize(:yellow,)
+        puts "Try agian!".colorize(:red,)
+        puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
+
+    else
+        puts "Success!".colorize(:light_green,)
+        status = false
+    end
+end
     # Prompts the user to enter their name.
     # Inputed entered is store within inte @name variable.
     puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
@@ -76,7 +90,6 @@ def player_name_selection
     spinner.auto_spin # Automatic animation with default interval
     sleep(1) # Perform task
     spinner.stop("Done!".colorize(:light_magenta,)) # Stop animation
-    puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
     puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
     puts "Welcome ".colorize(:cyan,) + @name.colorize(:cyan,) + "!".colorize(:cyan,)
     puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
