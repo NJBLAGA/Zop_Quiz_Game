@@ -103,5 +103,21 @@ for question in questions
     end
 end
 
+# Test Cases:
 
+# 1. Inpted the following:
+#  "a", "b", "c" "d"
+# Returned  correctly with score and attempts changing as intended.
+# Test results were unaffected by the implementation of a validator.
 
+# 2. Inpted the following:
+# "  "
+# Returned  with a 'no match' on every question resulting in score always being unchanged and attempts always being reduced by 1.
+# Implementation of a validator gave this input a invalid answer response, pormpting the user to try agian.
+# Attempt and score were not changed due to this Producing a desired outcome.
+
+# 3. Inpted the following:
+# "1", "2", "3", "4",
+# Returned  with a 'no match' on every question resulting in score always being unchanged and attempts always being reduced by 1.
+# # Implementation of a validator gave this input a invalid answer response, pormpting the user to try agian.
+# Attempt and score were not changed due to this Producing a desired outcome.

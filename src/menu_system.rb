@@ -65,7 +65,7 @@ def player_name_selection
     # Trademark.
     puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
     puts "What is your name?".colorize(:yellow,)
-    name = gets.chomp
+    name = gets.chomp 
     @name = name
     # Prompts the user to enter their name.
     # Inputed entered is store within inte @name variable.

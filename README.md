@@ -4,7 +4,7 @@
 
 ### **Nathan Blaga GitHub Repo:** [https://github.com/NJBLAGA/NathanBlaga_T1A3](https://github.com/NJBLAGA/NathanBlaga_T1A3)
 
-### **Trello Board - BLAGA - Portfolio:** [https://trello.com/b/3egElIWF](https://trello.com/b/3egElIWF)
+### **Trello Board - BLAGA - Terminal App:** [https://trello.com/b/3egElIWF](https://trello.com/b/3egElIWF)
 
 ## **Software Development Plan:**
 
@@ -31,16 +31,16 @@ Zop isnt your average quiz game, it provides the player with a fun and entertain
 
 **Main Menu Sytem:**
 
-![Trellowboard -Features](./docs/img/in_game_main_menu.png)
+![Zop - Main Menu](./docs/img/in_game_main_menu.png)
 
-![Trellowboard -Features](./doc/img/../../docs/img/in_game_begin.png)
+![Zop - Welcome Menu](./doc/img/../../docs/img/in_game_begin.png)
 
 The entire game of zop is interconnected thorugh a menu system. This system allows the user to navigate inbetween menus all the way from the title page to any of the 3 levels provided, to an indepth rules and isntructions page. The menu system was devleoped with a test driven development approach. All functions and pathways provided by the system have been tested and constructed to ensure no errors can occur.
 
 **End of question panel:**
 
-![Trellowboard -Features](./doc/img/../../docs/img/in_game_correct%20answer.png)
-![Trellowboard -Features](./doc/img/../../docs/img/in_game_incorrect_answer.png)
+![Zop - Level 1 - Correct Answer.](./doc/img/../../docs/img/in_game_correct%20answer.png)
+![Zop - Level 1 - Incorrect Answer.](./doc/img/../../docs/img/in_game_incorrect_answer.png)
 
  The game Zop consists of 3 different levels all with 30 unquie questions with increasing diffucilties. The player is asked at random one of the 30 questions for that level. The player is then prompted to answer either a,b,c or d. Zop will then display an end of question panel in which several key stats are provided. The user will be shown if the inputed the correct answer. If the inputed answer was correct, Zop will then display their current score and attempts remaining. If the inputed answer was incorrect, Zop will inform the player that, the inputed answer was incorrect, provide the correct answer, display the players current score and attempts remaining. This feature allows the player to have a play by play view on how the game is progressing after each question.
 
@@ -50,14 +50,14 @@ Zop displays the diffcuilty of each question as it is presented to the player. T
 
 **Invalid inputed answer:**
 
-![Trellowboard -Features](./img/../docs/img/in_game_invalid_input.png)
+![Zop - Level 1 - Invalid Answer.](./img/../docs/img/in_game_invalid_input.png)
 
 Another interesting feature is that of invalid input prompts.
 If the user inputs an answer that is not a,b,c or d, then they are promoted to try agian till the input one of the 4 correct inputs. The user will not lose any attempts for an invalid inputed answer.
 
 **Rules/Instruction Menu:**
 
-![Trellowboard -Features](./docs/img/in_game_rules_menu.png)
+![Zop - Level 1 - Rules Menu.](./docs/img/in_game_rules_menu.png)
 
 Another interesting feature of Zop is that of its rules and instructions menu. This menu can be accessed through the main menu or by command line arguments . These command lines arguments can be found below in the zop-helper section. The rules and intrustions menu aid the player in explaining how the game is run and played. It also instructs the player on the requirements of completing any given level and the attempts remaining system.
 
@@ -75,14 +75,19 @@ Below Zop intial control flow and desgin is shown. The desgin was kept intact fr
 
 ## **Implementation Plan:**
 
-An implementation plan was created to set out how each feature of Zop would be developed and implemented over a set amount of time. Each feature included a checklist containing  components and tasks vital to the completion and implmentation of said feature. Each feature and its checklist items had been assigned a prioritation and timeframe in which they were to be desgined and intergrated into Zop. Below are images depicting the final state of the implementation plan. All features and checklist items were completed within time frames and all bugs and errors were resolved.
+An implementation plan was created to set out how each feature of Zop would be developed and implemented over a set amount of time.
 
-![Trellowboard -Features](./docs/img/trelloboard.png)
-![Trellowboard -Features](./docs/img/main_menu.png)
-![Trellowboard -Features](./docs/img/question_panel.png)
-![Trellowboard -Features](./docs/img/rules_instructions.png)
-![Trellowboard -Features](./docs/img/difficulty.png)
-![Trellowboard -Features](./docs/img/desgin_layout.png)
+Each feature included a checklist containing  components and tasks vital to the completion and implmentation of said feature. Each feature and its checklist items had been assigned a prioritation and timeframe in which they were to be desgined and intergrated into Zop. 
+
+Screenshots below depict the final state of the implementation plan. All features and checklist items were completed within time frames and all bugs and errors were resolved.
+
+![Trellowboard - Features - Overall board](./docs/img/trelloboard.png)
+![Trellowboard - Features - Main Menu System.](./docs/img/main_menu.png)
+![Trellowboard - Features - End Panel.](./docs/img/question_panel.png)
+![Trellowboard - Features - Rules Menu.](./docs/img/rules_instructions.png)
+![Trellowboard - Features - Difficulty Display Feature.](./docs/img/difficulty.png)
+![Trellowboard - Features - Desgin Layout.](./docs/img/desgin_layout.png)
+![Trellowboard - Features - Ruby Gems..](./docs/img/desgin_layout.png)
 
 ## **Testing:**
 
@@ -93,14 +98,13 @@ During the development of Zop, two main tests were manually conducted to ensure 
 - correct_answer_testing.rb
 - score_attempts_testing.rb
 
+### **Test results and data:**
+
+#### **Google Docs - Testing - Terminal App:** [https://docs.google.com/spreadsheets/d/1HHdA5gUlRbrPnrXBQfdPw3rGonBHYkLfq_sWUu_jHIM/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1HHdA5gUlRbrPnrXBQfdPw3rGonBHYkLfq_sWUu_jHIM/edit?usp=sharing)
+
 ### **correct_answer_testing.rb**
 
-The below test was created and run to check if the game was recieving an inputed answer from the player. Once recieved the test checks if the code is cross referencing that answer with the correct answer located within the questions array. Once cross refernced the test returns whether the two answers were a match or not. This test served as the backbone of testing Zop. It contains the same for loop and if statement found in the actually code. However instead of returning information to the player, it was assgined a simple match, no match paramter. After running the test on several questions, the results earning a matched response were crossed refernced by hand with the bank of answers I had for all questions. This was a second layer of testing to ensure any information displayed to the player are correct and accurate.
-
-![Trellowboard -Features](./docs/img/correct_answer_testing_match.png)
-![Trellowboard -Features](./doc/img/../../docs/img/correct_answer_testing_no_match.png)
-
-While the first test case was using inputs of "a","b","c" and "d". A second test case was run in which other inputs were entered such as "1","hghfjf" and variours other inputed strings. This displayed a no match result and put forward a serious issue regarding error handling. If the correct answer to a question was "a", "b" "c" and "d" would provide an incorrect answer yes. But any mistypying or slip of a finger could see the player being penalised. A validation was implmented to make sure that only answers of "a" "b" "c" and "d" would be accepted. This resulted in a error free experience during gameplay.
+The below test was created and run to check if the game was recieving an inputed answer from the player. Once recieved the test checks if the code is cross referencing that answer with the correct answer located within the questions array. Once cross refernced the test returns whether the two answers are a match or not. This test served as the backbone of testing Zop. It contains the same for loop and if statement found in the actually code. However instead of returning information to the player, it was assgined a simple match, no match paramter. After running the test on several questions, the results earning a matched response were crossed refernced by hand with the bank of answers I had for all questions. This was a second layer of testing to ensure any information displayed to the player are correct and accurate.
 
 ```ruby
 # Testing questions array with 5 unique Questions.
@@ -130,15 +134,26 @@ for question in questions
 end
 ```
 
-### **score_attempts_testing.rb**
+![Test Results - Match](./docs/img/correct_answer_testing_match.png)
+![Test Results - No Match](./doc/img/../../docs/img/correct_answer_testing_no_match.png)
+
+Several test cases were run in order to get a more indepth spread of possible inputs.
+
+The first test case was using inputs of "a","b","c" and "d". Results below:
+
+![Test Results - Data - Test Case 1]()
+
+ A second test case was run in which empty inputs were entered such as " ".Results below:
+
+![Test Results - Data - Test Case 2]()
+
+ The third test case was using inputs of "1","2","3" and "4". Results below:
+
+![Test Results - Data - Test Case 2]()
+
+ ### **score_attempts_testing.rb**
 
 The below test was designed and run to check if the code was assgining the right action to score and attempts remaining. If the player entered a correct answer, their score would inscrease by 1. While if the player entered a incorrect answer, their attempt would decrease by 1. The below test like the correct_answer_testing.rb takes the inputed answer by the player and cross-references it agianst the stored answer in the question array. However it adds 1 to score if correct and subtracts 1 from attempt if incorrect.
-
-![Trellowboard -Features](./doc/img/../../docs/img/score_attempts_testing.png)
-
-![Trellowboard -Features](./doc/img/../../docs/img/score_attempts_testing_invalid_answer.png)
-
-Running test cases of "a","b","c" and "d" resulted in the code and test performing as intended. However what was discovered from this was that like the previous testing, any input other then "a","b","c" and "d" would not only result in an incorrect answer, but reduce the attempts remaining. The code was picking up on the entered answer and running it by the stored answer. This resulted in the code assuming it to be an incorrect answer and reducing the attempts remaining by 1. This was an issue as the game could not distinguish between an incorrect inputed answer and a mistype or error handling. This resulted in a validation being implmented to make sure that only answers of "a" "b" "c" and "d" would be accepted. Intergrating this into the code meant that an error in the players inputed answer, was not considered vaild. This in turn through a loop allowed the game to prompt the user agian and agian for a correct input. This in turn also prevented the game from reducing the attempts remaining if the player provided an invalid answer.
 
 ```ruby
 # Testing questions array with 5 unique Questions.
@@ -187,6 +202,46 @@ end
 
 ```
 
+![Test Results - Correct input](./doc/img/../../docs/img/score_attempts_testing.png)
+
+![Trellowboard -Inorrect input](./doc/img/../../docs/img/score_attempts_testing_invalid_answer.png)
+
+Several test cases were run in order to get a more indepth spread of possible inputs and thir impact on score and attempts.
+
+The first test case was using inputs of "a","b","c" and "d". Results below:
+
+![Test Results - Without validation - Data - Test Case 2]()
+
+ A second test case was run in which empty inputs were entered such as " ".Results below:
+
+![Test Results - Without validation - Data - Test Case 2]()
+
+ The third test case was using inputs of "1","2","3" and "4". Results below:
+
+![Test Results - Without validation - Data - Test Case 2]()
+
+Running test cases of "a","b","c" and "d" resulted in the code and test performing as intended. However what was discovered from this was that like the previous testing, any input other then "a","b","c" and "d" would not only result in an incorrect answer, but reduce the attempts remaining.
+
+This was an issue as the game could not distinguish between an incorrect answer and a mistype or a user typing error. 
+
+To resolve this issue a validation module was implmented. Its function was to make sure that only answers of "a" "b" "c" and "d" would be accepted. Intergrating this into the code meant that an error in the players inputed answer, was not considered vaild.
+
+Running this moudle through a loop allowed the game to prompt the user mutpuile times for a correct input until a vaild answer was inputed. This moudle solved the main issue with invaild player inputs and added value to the the overall performance of the game.
+
+The same test cases above were run with the new validation module in order to get a more indepth spread of possible inputs and thir impact on score and attempts.
+
+The first test case was using inputs of "a","b","c" and "d". Results below:
+
+![Test Results - With validation - Data - Test Case 1]()
+
+ A second test case was run in which empty inputs were entered such as " ".Results below:
+
+![Test Results - With validation - Data - Test Case 2]()
+
+ The third test case was using inputs of "1","2","3" and "4". Results below:
+
+![Test Results - With validation - Data - Test Case 3]()
+
 ## **Instructions:**
 
 ### **System requirements:**
@@ -221,3 +276,7 @@ end
   - Run to display zop_helper instructions.
 - ruby zop_helper.rb -d
   - Run to display zop_helper difficulties.
+
+### **Reference List:**
+
+(Who wants to be a G MAN) --DO TONIGHT

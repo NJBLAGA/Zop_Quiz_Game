@@ -56,7 +56,7 @@ questions = [
     Question.new(TQ1, "a", "Novice"),
     Question.new(TQ2, "d", "Novice"),
     Question.new(TQ3, "a", "Novice"),
-    Question.new(TQ4, "a", "Novice"),
+    Question.new(TQ4, "c", "Novice"),
     Question.new(TQ5, "b", "Novice"),
     ]
 # Testing questions array with 5 unique Questions.
@@ -85,3 +85,21 @@ for question in questions
     end
 end
 
+# Test Cases:
+
+# 1. Inputed the following:
+#  "a", "b", "c" "d"
+# Returned  both 'match' and 'no match' results for various  questions.
+# Test results were unaffected by the implementation of a validator.
+
+# 2. Inputed the following:
+# "  "
+# Returned 'no match' result for every question.
+# Implementation of a validator gave these test inputs a invalid answer response, pormpting the user to try agian.
+# This solved the issue of any error occuring during the verification of the player's inputed answer.  
+
+# 3. Inputed the following:
+# "1", "2", "3", "4",
+# Returned 'no match' result for every question.
+# Implementation of a validator gave these test inputs a invalid answer response, pormpting the user to try agian.
+# This solved the issue of any error occuring during the verification of the player's inputed answer. 
