@@ -125,18 +125,23 @@ def continue_screen
             # Display the player's name and congratulating them on beating the level).
     puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
             puts "Are you ready to continue playing Zop?".colorize(:yellow,)
-            puts "1. Zop me in!".colorize(:magenta,)
-            puts "2. I'm all Zoped out!".colorize(:magenta,)
+    prompt = TTY::Prompt.new
+        choices = [
+             {name: "Zop me in!", value: 1},
+             {name: "I'm all Zoped out!", value: 2},
+    ]
             # Prompting player to play another level or stop playing).
-            case next_level_progress = gets.chomp.to_i
+            players_input = prompt.select("Select An Option:", choices)    
+            puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
+            case players_input
                 when 1
                 return level_path
                 # Returning the player to the level selection page to pick another level and continue playing.
                 when 2
                 return thank_you
-                # Returning the player to the thank you for playing page.
-            end
-end
+                # Returning the player to the thank you for playing page.            
+            end   
+        end                     
 # -----------------------------------------------------------------------------------------
 
 
