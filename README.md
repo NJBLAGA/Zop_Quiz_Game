@@ -145,15 +145,21 @@ end
 
 Several test cases were run in order to get a more indepth spread of possible inputs.
 
-The first test case was using inputs of "a","b","c" and "d". Results below:
+The first test case was using inputs of "a","b","c" and "d".
+
+**Results below:**
 
 ![Test Results - Data - Test Case 1](./doc/img/../../docs/img/correct_answer_testing_case_1_results.png)
 
- A second test case was run in which empty inputs were entered such as " ".Results below:
+ A second test case was run in which empty inputs were entered such as " ".
+
+**Results below:**
 
 ![Test Results - Data - Test Case 2](./doc/img/../../docs/img/correct_answer_testing_case_2_results.png)
 
- The third test case was using inputs of "1","2","3" and "4". Results below:
+ The third test case was using inputs of "1","2","3" and "4".
+
+**Results below:**
 
 ![Test Results - Data - Test Case 2](./doc/img/../../docs/img/correct_answer_testing_case_3_results.png)
 
@@ -216,19 +222,19 @@ Several test cases were run in order to get a more indepth spread of possible in
 
 The first test case was using inputs of "a","b","c" and "d".
 
-Results below:
+**Results below:**
 
 ![Test Results - Without validation - Data - Test Case 2](./doc/img/../../docs/img/score_attempt_testing_case_1_results.png)
 
- A second test case was run in which empty inputs were entered such as " ".
+A second test case was run in which empty inputs were entered such as " ".
 
-Results below:
+**Results below:**
 
 ![Test Results - Without validation - Data - Test Case 2](./doc/img/../../docs/img/score_attempt_testing_case_2_results.png)
 
- The third test case was using inputs of "1","2","3" and "4".
+The third test case was using inputs of "1","2","3" and "4".
 
-Results below:
+**Results below:**
 
 ![Test Results - Without validation - Data - Test Case 2](./doc/img/../../docs/img/score_attempt_testing_case_3_results.png)
 
@@ -272,28 +278,26 @@ Results below:
 
 - gem "colorize", "~> 0.8.1"
 
-- gem "rspec", "~> 3.10"
-
 - gem "tty-prompt", "~> 0.22.0"
 
 - gem "tty-spinner", "~> 0.9.3"
 
 ### **Installation:**
 
-- ./install_zop.sh
+./install_zop.sh
 
 ### **Run:**
 
-- ./run_zop.sh
+./run_zop.sh
 
 ### **Zop_Helper:**
 
-- ruby zop_helper.rb -r
-  - Run to display zop_helper rules.
-- ruby zop_helper.rb -i
-  - Run to display zop_helper instructions.
-- ruby zop_helper.rb -d
-  - Run to display zop_helper difficulties.
+**ruby zop_helper.rb -r**
+Run to display zop_helper rules.
+**ruby zop_helper.rb -i**
+Run to display zop_helper instructions.
+**ruby zop_helper.rb -d**
+Run to display zop_helper difficulties.
 
 ### **Reference List:**
 
