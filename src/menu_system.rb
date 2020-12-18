@@ -38,7 +38,7 @@ def title_scene
     ]
     # Main menu options.
     # Through tty prompt, assigned each option with a value.
-    players_input = prompt.select("Select an option:", choices)    
+    players_input = prompt.select("Select An Option:", choices)    
     case players_input
     # Using above assgined values to use case statement below.
         when 1
@@ -66,14 +66,13 @@ def player_name_selection
     puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
     status = true
 while status
-    puts "Please enter your name:".colorize(:yellow,)
-    puts "(15 Character Limit)".colorize(:light_magenta,)
+    puts "Please Enter Your Name:".colorize(:yellow,) + " (15 Character Limit)".colorize(:light_magenta,)
     puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
     name = gets.chomp
     @name = name
     if name.length > 15
-        puts "You have entered to many characters!".colorize(:yellow,)
-        puts "Try agian!".colorize(:red,)
+        puts "You Have Entered To Many Characters!".colorize(:yellow,)
+        puts "Try Agian!".colorize(:red,)
         puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
 
     else
@@ -196,9 +195,9 @@ def game_rules
     puts "Difficulty:".colorize(:light_magenta,)
     # Difficulty heading followed by the 3 levels of Zop and their difficulties.
     puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
-    puts "Level 1: Novice & Easy questions.".colorize(:yellow,)
-    puts "Level 2: Medium & Hard questions.".colorize(:yellow,)
-    puts "Level 3: Expert & Zop questions.".colorize(:yellow,)
+    puts "Level 1: Novice & Easy Questions.".colorize(:yellow,)
+    puts "Level 2: Medium & Hard Questions.".colorize(:yellow,)
+    puts "Level 3: Expert & Zop Questions.".colorize(:yellow,)
     puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
     prompt = TTY::Prompt.new
     choices = [
@@ -227,7 +226,7 @@ def thank_you
     puts "BLAGA STUDIOS™ © 2020".colorize(:light_blue,)
      # Trademark.
     puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
-    puts "Thank you for playing Zop! ".colorize(:yellow,) 
+    puts "Thank You For Playing Zop! ".colorize(:yellow,) 
     puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
     string = "String which contains all kinds of emoji: Sub-Region flag:"
     TTY::Spinner.new
@@ -237,7 +236,7 @@ def thank_you
     spinner.stop("Done!".colorize(:light_magenta,)) # Stop animation
     # tty-spinner formatting.
     puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
-    puts "Sorry to see you go ".colorize(:cyan,) + @name.colorize(:cyan,) + "!".colorize(:cyan,)
+    puts "Sorry To See You Go ".colorize(:cyan,) + @name.colorize(:cyan,) + "!".colorize(:cyan,)
     # Displaying a thank you message to the player.
     prompt = TTY::Prompt.new
     choices = [
@@ -279,7 +278,7 @@ def game_over
     spinner.stop("Done!".colorize(:light_magenta,)) # Stop animation
     # tty-spinner formatting.
     puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
-    puts "Better luck next time ".colorize(:cyan,) + @name.colorize(:cyan,) + "!".colorize(:cyan,)
+    puts "Better Luck Next Time ".colorize(:cyan,) + @name.colorize(:cyan,) + "!".colorize(:cyan,)
     puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
     prompt = TTY::Prompt.new
     choices = [

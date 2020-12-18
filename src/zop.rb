@@ -64,7 +64,7 @@ def exe_game(questions)
         # While loop that will repeat itself as long as the user inputs an answer that is not (a,b,c,d).
     puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
         puts "Invalid Answer!".colorize(:red,)
-        puts "Please enter either a,b,c,d as your answer.".colorize(:light_magenta,)
+        puts "Please enter either a,b,c or d as your answer.".colorize(:light_magenta,)
         # Prompts the user their answer was an invaild answer and what the correct input should be .
     puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
         else valid
@@ -124,11 +124,11 @@ def continue_screen
             puts "You Zopped That! ".colorize(:cyan,)
             # Display the player's name and congratulating them on beating the level).
     puts "--------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
-            puts "Are you ready to continue playing Zop?".colorize(:yellow,)
+            puts "Are You Ready To Continue Playing Zop?".colorize(:yellow,)
     prompt = TTY::Prompt.new
         choices = [
-             {name: "Zop me in!", value: 1},
-             {name: "I'm all Zoped out!", value: 2},
+             {name: "Zop Me In!", value: 1},
+             {name: "I'm All Zoped Out!", value: 2},
     ]
             # Prompting player to play another level or stop playing).
             players_input = prompt.select("Select An Option:", choices)    
