@@ -3,7 +3,6 @@ GEM
   specs:
     artii (2.1.2)
     colorize (0.8.1)
-    rspec (3.10.0)
     tty-prompt (0.22.0)
     tty-spinner (0.9.3)
 
@@ -13,7 +12,6 @@ PLATFORMS
 DEPENDENCIES
   artii (~> 2.1)
   colorize (~> 0.8.1)
-  rspec (~> 3.10)
   tty-prompt (~> 0.22.0)
   tty-spinner (~> 0.9.3)
 
