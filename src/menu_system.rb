@@ -71,8 +71,8 @@ while status
     name = gets.chomp
     @name = name
     if name.length > 15
-        puts "You Have Entered To Many Characters!".colorize(:yellow,)
-        puts "Try Agian!".colorize(:red,)
+        puts "You Have Entered Too Many Characters!".colorize(:yellow,)
+        puts "Try Again!".colorize(:red,)
         puts "-------------------------------------------------------------------------------------------------------------------------------".colorize(:light_green,)
 
     else
