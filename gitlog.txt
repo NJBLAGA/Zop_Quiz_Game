@@ -1,0 +1,329 @@
+commit 6fba4ed5fa528993b34962d74c2367cefdddbda2
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Sat Dec 19 12:36:30 2020 +1100
+
+    last spell check
+
+commit 79757fa55ccefd175465f411a56fcf4bd58e876b
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Fri Dec 18 18:28:22 2020 +1100
+
+    spellcheck readme
+
+commit 0393752ffd180fd4d50c8cc4a8c0cf60ef5d7f6e
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Fri Dec 18 17:20:40 2020 +1100
+
+    added more to docs
+
+commit 7237180bfb9fbcd0f34fe6d0adcf73fe2d246396
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Fri Dec 18 17:08:20 2020 +1100
+
+    added new text
+
+commit 731a599b538a2c407d9f293c01e3a274816b182b
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Fri Dec 18 15:47:08 2020 +1100
+
+    fixed gems
+
+commit 206a5431825ea641f901611af62f0d2ef9cb6a26
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Fri Dec 18 11:29:17 2020 +1100
+
+    fixed gemlock issue
+
+commit 4e6a1eb3eb739984173bc63233d57e09d0a9d64f
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Fri Dec 18 11:09:05 2020 +1100
+
+    gemlock
+
+commit 7d6b679ca93ec6e52c5b1e0db945ea73d41325d7
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Thu Dec 17 22:04:11 2020 +1100
+
+    added change to continue menu
+
+commit 36dd5155feed524cc46d96c9111ed8714b0709d3
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Thu Dec 17 21:48:53 2020 +1100
+
+    added gems
+
+commit d7e75a26bef20d2576e79df4aeed38188ab78aa4
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Thu Dec 17 21:41:29 2020 +1100
+
+    added slide deck
+
+commit 26edac8fed14b432a67beccafc8343a8ca3ca786
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Thu Dec 17 19:01:13 2020 +1100
+
+    added reference lsit
+
+commit 318cbb7c6156b3bfa9699532110b1c06e2b3b19a
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Thu Dec 17 18:45:02 2020 +1100
+
+    added readme content
+
+commit ac3fa8eb851835d700bdcfbcdfd8f9c65484b7e4
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Thu Dec 17 14:32:55 2020 +1100
+
+    added updated screnshots
+
+commit 5cb3234f1cbd9b1dc1562559f460f10c617b3d0e
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Thu Dec 17 14:19:44 2020 +1100
+
+    added more to docs
+
+commit 1826d16a1c7beb382aa922a134b38349e3be4057
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Thu Dec 17 11:23:23 2020 +1100
+
+    added error handling for name input
+
+commit 55eaa52c6bc1c6a5246b0692891e0340af6bbdf3
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Thu Dec 17 11:11:32 2020 +1100
+
+    added more to docs
+
+commit c6803aab75b8a192911885b67f963bf929c9cfb2
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Wed Dec 16 22:29:54 2020 +1100
+
+    added details to testing
+
+commit b4aab58851c2a5bebfb3054c907689dfe1c4a3b7
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Wed Dec 16 20:48:03 2020 +1100
+
+    added control flow
+
+commit 24369acb2a3a8d535862122088f7bea98b8ad659
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Wed Dec 16 20:31:16 2020 +1100
+
+    added documentation imags
+
+commit 116164202e0100da7961eea6e9d897eda63a0385
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Wed Dec 16 16:43:57 2020 +1100
+
+    added zop_helper
+
+commit 917eb9fd6006a1dbbaf9118b07f8bc27739a21b6
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Wed Dec 16 16:03:24 2020 +1100
+
+    added small quiz changes
+
+commit 3d2c90ee95302592c70db0927f1578801905c0d4
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Wed Dec 16 12:22:01 2020 +1100
+
+    added last command line option
+
+commit 5d8c277aeea7f5d2e4be48114e5f17c8084a411b
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Wed Dec 16 12:15:02 2020 +1100
+
+    added new command line options
+
+commit 9a53944aca50853768c0d5d3056c73ad510a29a9
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Wed Dec 16 11:41:36 2020 +1100
+
+    spell check-3
+
+commit e698859eabf6fa94ef011ad69736bc8d239ae60d
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Wed Dec 16 11:05:32 2020 +1100
+
+    spell check-2
+
+commit 7aa5062e25bbf20df0cf04b68768165c32d48d14
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Wed Dec 16 10:37:14 2020 +1100
+
+    spell check-1
+
+commit 7bb9b11b918a63487cba80f584000ccf926b2862
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Wed Dec 16 10:02:47 2020 +1100
+
+    spelling mistakes
+
+commit 5e5628c18a60a238475c234e09b9d5314580fe71
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Wed Dec 16 09:37:40 2020 +1100
+
+    added more error handling tools
+
+commit fe0bf4eb7d251800cba09affb186668b12e6571a
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Wed Dec 16 07:58:15 2020 +1100
+
+    added error handling
+
+commit 78a3d13ac0ae7cf2a602d04796d3773680895653
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Tue Dec 15 21:43:04 2020 +1100
+
+    added break for loop
+
+commit 6a4a1d9c4593dc3b1256e80b7762d66a91957d28
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Tue Dec 15 21:32:03 2020 +1100
+
+    added loop for error handling
+
+commit dd2f15d1ee4be5210fba58875d280da16e1d262e
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Tue Dec 15 21:07:38 2020 +1100
+
+    added validator
+
+commit f4035609fa5c107ed70288559dfa9e5f750740df
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Tue Dec 15 18:18:15 2020 +1100
+
+    added new instructions
+
+commit 8a2cc4b69c15b881ec6fecd33fc884388961e326
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Tue Dec 15 18:02:19 2020 +1100
+
+    zop-helper
+
+commit 1dfd61e9ae5bd6fbe7f9db2e7c88a2d05d79527c
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Tue Dec 15 16:39:08 2020 +1100
+
+    added help command line
+
+commit f3c282d23afafa633bea67bd5604405ad7b7b547
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Tue Dec 15 14:15:33 2020 +1100
+
+    added install-run files
+
+commit e27916586e422d87c9c42869dc2cbd45ee1df967
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Mon Dec 14 22:19:23 2020 +1100
+
+    load bars
+
+commit 0cefa8f981fc2c0098fe28455c91ac1764579b5c
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Mon Dec 14 21:33:43 2020 +1100
+
+    added tty-prompt
+
+commit 005645b140d94393f16ed520794e87e19336efe9
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Mon Dec 14 18:20:54 2020 +1100
+
+    added new pages
+
+commit b22263c6ff8a270b98f0463e085816f0d75bc30d
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Mon Dec 14 16:08:13 2020 +1100
+
+    added more questions
+
+commit e5b7d0d3cd76012ec5195de43c11ba1ebba67050
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Sun Dec 13 14:28:38 2020 +1100
+
+    added more variables to test bank
+
+commit d0e9d6e5c01c30c7ec5a20b7a342ed85a8d2b7ae
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Sun Dec 13 13:05:22 2020 +1100
+
+    added attempts
+
+commit 618d88ed5362887a8cfb20c381f9834b111bfde9
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Sat Dec 12 20:47:54 2020 +1100
+
+    added more colour
+
+commit 3730e885a243248b4da0654bfd0c6a44203940c4
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Sat Dec 12 20:15:55 2020 +1100
+
+    added some desgin changes
+
+commit 24f28b86f58e6283d56c10d3fa408a4444e1eaaf
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Sat Dec 12 20:07:37 2020 +1100
+
+    added level selection
+
+commit 9909ba06c2f86c90f0c849da7f4d54751c9ce0ef
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Fri Dec 11 10:33:51 2020 +1100
+
+    fixed menu error
+
+commit 2ce49fe5e1b37ed31792de2d7e1c6029987a7fd2
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Fri Dec 11 07:17:22 2020 +1100
+
+    joint game to menu
+
+commit 64a03b75cf82a3a9b867db7c359fdcabd393cf0b
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Thu Dec 10 23:31:32 2020 +1100
+
+    added instructions menu
+
+commit fe3b290f52f0288cfdcf03d483a41bfdf007efeb
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Thu Dec 10 20:18:10 2020 +1100
+
+    added menu
+
+commit 4510e31059d346ddf99e77527a5c3aec6333d51c
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Thu Dec 10 19:33:22 2020 +1100
+
+    added test bank
+
+commit 425727e6d97aea16bba912af63058b9e88f6bce1
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Thu Dec 10 19:32:00 2020 +1100
+
+    added player and question class
+
+commit 3240340b68ec2f453de54314b203f5a525fc3126
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Thu Dec 10 19:20:55 2020 +1100
+
+    added bundle
+
+commit 804f054db70154f536871aa9c82b6a71bca55c03
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Thu Dec 10 19:13:10 2020 +1100
+
+    added folders
+
+commit ff436ec459147f03b6d8611570b2c9bfcaff925c
+Author: NJBLAGA <nathanblaga90@gmail.com>
+Date:   Thu Dec 10 19:11:11 2020 +1100
+
+    added files
+
+commit 154741d263155af7c08f5891934f1fbe0e49ec68
+Author: Nathan Blaga <72443952+NJBLAGA@users.noreply.github.com>
+Date:   Thu Dec 10 19:07:32 2020 +1100
+
+    Initial commit
