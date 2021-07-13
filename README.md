@@ -1,6 +1,4 @@
-# **NathanBlaga_T1A3 - T1A3 - Terminal Application**
-
-## **Quiz Game - Zop**
+# **Quiz Game - Zop**
 
 ### **Nathan Blaga GitHub Repo:** [https://github.com/NJBLAGA/NathanBlaga_T1A3](https://github.com/NJBLAGA/NathanBlaga_T1A3)
 
